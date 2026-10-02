@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrated 622 | Orientation Portal</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-hover: #1d4ed8;
+      --bg-slate: #f8fafc;
+      --card-bg: #ffffff;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --border-color: #e2e8f0;
+      --accent-blue: #eff6ff;
+      --warning-bg: #fffbebf5;
+      --warning-border: #fef3c7;
+      --warning-text: #92400e;
+      --badge-bg: #dbeafe;
+      --badge-text: #1e40af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-slate);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    /* Notice Box */
+    .notice-card {
+      background-color: var(--warning-bg);
+      border: 1px solid var(--warning-border);
+      border-left: 5px solid #f59e0b;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .notice-card h2 {
+      font-size: 1.1rem;
+      color: var(--warning-text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .notice-card p {
+      color: #78350f;
+      font-size: 0.975rem;
+    }
+
+    /* Section Styling */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-blue);
+    }
+
+    /* Video Embed Aspect Ratio */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #000;
+      margin-top: 1rem;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Tabs UI */
+    .tab-navigation {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+      margin-bottom: 1.5rem;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s ease;
+      margin-bottom: -2px;
+    }
+
+    .tab-btn:hover {
+      color: var(--primary);
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    /* Table Styling */
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    table.schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    table.schedule-table th {
+      background-color: var(--accent-blue);
+      color: var(--primary);
+      padding: 0.85rem 1rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    table.schedule-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-dark);
+    }
+
+    table.schedule-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.schedule-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .meta-badge {
+      display: inline-block;
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Elements List Grid */
+    .elements-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .elements-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .element-card {
+      background-color: var(--bg-slate);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+    }
+
+    .element-card h3 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .element-card p {
+      font-size: 0.925rem;
+      color: var(--text-muted);
+    }
+
+    /* Checklist Styling */
+    .action-checklist {
+      list-style-type: none;
+      margin-top: 0.75rem;
+    }
+
+    .action-checklist li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.65rem;
+      font-size: 0.975rem;
+    }
+
+    .action-checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* Formatted Email Content */
+    .email-body {
+      background-color: var(--accent-blue);
+      border: 1px solid #dbeafe;
+      border-radius: 8px;
+      padding: 1.75rem;
+      font-size: 1rem;
+      color: #1e293b;
+    }
+
+    .email-body p {
+      margin-bottom: 1rem;
+    }
+
+    .email-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .email-header-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #cbd5e1;
+    }
+
+    .module-list {
+      margin: 1rem 0 1rem 1.5rem;
+    }
+
+    .module-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Integrated 622</h1>
+      <p>Data, Statistics, and Decision Science &bull; Fall 2026</p>
+    </header>
+
+    <!-- Important Notice -->
+    <div class="notice-card">
+      <h2>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+        Important Notice
+      </h2>
+      <p><strong>Please stay focused on your feeder course.</strong> Because it provides the critical foundation for our upcoming project, your current efforts directly pay off in project definition. Please check your email for structural details; syllabus and course specifics will follow.</p>
+    </div>
+
+    <!-- General Welcome Video -->
+    <section class="section-card">
+      <h2 class="section-title">Welcome & General Orientation</h2>
+      <p>This introductory video applies to all entrants across both track disciplines:</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/7Uho6crtZ_Q" title="Integrated 622 General Welcome Video" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Cohort Specific Videos -->
+    <section class="section-card">
+      <h2 class="section-title">Track Specific Videos</h2>
+      
+      <div class="tab-navigation">
+        <button class="tab-btn active" onclick="switchTab(this, 'video-org')">Organizational Management</button>
+        <button class="tab-btn" onclick="switchTab(this, 'video-ops')">Operations Management</button>
+      </div>
+
+      <div id="video-org" class="tab-pane active">
+        <p>Orientation video specifically tailored for Organizational Management entrants:</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/GB-8cHbDai0" title="Organizational Management Track Video" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div id="video-ops" class="tab-pane">
+        <p>Orientation video specifically tailored for Operations Management entrants:</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/ht3WN9Dvp5Q" title="Operations Management Track Video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Schedule Section -->
+    <section class="section-card">
+      <h2 class="section-title">Course Schedule & Calendar</h2>
+      <p>In-person sessions run 4 hours (6:00–10:00 pm). Online sessions run 2h 15m (6:00–8:15 pm).</p>
+
+      <div class="table-wrapper">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Module / Week</th>
+              <th>Salem (Tue, 6–10 pm)</th>
+              <th>Portland (Wed, 6–10 pm)</th>
+              <th>Online (Thu, 6–8:15 pm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Intro &bull; Week 8</strong></td>
+              <td>—</td>
+              <td>No class</td>
+              <td>Oct. 15 (async)</td>
+            </tr>
+            <tr>
+              <td><strong>Module 1: Data in Organizations</strong></td>
+              <td>Oct. 20 &bull; Oct. 27</td>
+              <td>Oct. 21 &bull; Oct. 28</td>
+              <td>Oct. 22 &bull; Oct. 29</td>
+            </tr>
+            <tr>
+              <td><strong>Module 2: Analytical Techniques</strong></td>
+              <td>Nov. 3 &bull; Nov. 10</td>
+              <td>Nov. 4 &bull; Nov. 11</td>
+              <td>Nov. 5 &bull; Nov. 12</td>
+            </tr>
+            <tr>
+              <td><strong>Module 3: Causation</strong></td>
+              <td>Nov. 17</td>
+              <td>Nov. 18</td>
+              <td>Nov. 19</td>
+            </tr>
+            <tr>
+              <td><strong>Thanksgiving Break</strong></td>
+              <td>Nov. 24 (available online)</td>
+              <td>No class</td>
+              <td>No class</td>
+            </tr>
+            <tr>
+              <td><strong>Module 3 Resumes</strong></td>
+              <td>Dec. 1</td>
+              <td>Dec. 2</td>
+              <td>Dec. 3</td>
+            </tr>
+            <tr>
+              <td><strong>Final Presentations</strong></td>
+              <td colspan="3" style="text-align: center; font-weight: 600; background-color: var(--accent-blue);">
+                In-Class Presentations: Dec. 1 (Salem) &bull; Dec. 2 (Portland) &bull; Dec. 3 (Online — Final Day)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">* Full session plans for each module will be posted the week of Oct. 19.</p>
+    </section>
+
+    <!-- First Deliverable Section -->
+    <section class="section-card">
+      <h2 class="section-title">Your First Deliverable: Project Brief (First Draft)</h2>
+      <div class="meta-badge">
+        Due before your first in-person session: Oct. 20 (Salem) or Oct. 21 (Portland)
+      </div>
+      <p>Your prior module has been building toward something. Write this brief as that module concludes—at the moment your thinking is most developed. You are not starting from zero; you are arriving with a partially formed project. Bring everything to your first session where your pod will be your first readers.</p>
+      
+      <p style="margin-top: 1rem; font-weight: 600;">Format: 1 to 2 pages covering these six core elements:</p>
+
+      <div class="elements-grid">
+        <div class="element-card">
+          <h3>1. The Organization</h3>
+          <p>What organization or type of organization are you working with—real, representative, or a useful fiction? What sector? What is it doing, trying to do, or struggling with?</p>
+        </div>
+        <div class="element-card">
+          <h3>2. The Model</h3>
+          <p>What is the core model your prior coursework has given you about how some aspect of this organization works? Name the key variables and relationships you believe hold between them.</p>
+        </div>
+        <div class="element-card">
+          <h3>3. The Question</h3>
+          <p>What change, decision, intervention, or comparison do you want to evaluate? Something that happened, something that might happen, or something you want to understand.</p>
+        </div>
+        <div class="element-card">
+          <h3>4. The Prediction</h3>
+          <p>If your model is right, what would you expect to see in data? Be specific. What direction? What does movement in your key variable actually look like?</p>
+        </div>
+        <div class="element-card">
+          <h3>5. The Data Sketch</h3>
+          <p>What data would let you test your prediction? Do you have it? Could you find it? Would you need to simulate it? Name the variables you would need to measure.</p>
+        </div>
+        <div class="element-card">
+          <h3>6. The Disciplinary Anchor</h3>
+          <p>What specific frameworks, concepts, or findings from your prior course are driving this? What are you bringing into the integration?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What To Do Now Section -->
+    <section class="section-card">
+      <h2 class="section-title">What to Do Now</h2>
+      <ul class="action-checklist">
+        <li>Watch the intro videos above—General Welcome first, then your discipline-specific video.</li>
+        <li>Watch your email for a follow-up note containing your pod assignment.</li>
+        <li>Begin drafting your 1–2 page <strong>Project Brief</strong> as your prior module concludes.</li>
+        <li>Reach out with any questions prior to our first session: <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a> (Calendar open; Google Meet available).</li>
+      </ul>
+    </section>
+
+    <!-- Email Letters Section -->
+    <section class="section-card">
+      <h2 class="section-title">Track Correspondence & Structural Overview</h2>
+      <p style="margin-bottom: 1.25rem;">Below are formatted copies of the initial orientation letters. Select your track tab to view the text with clean paragraph formatting:</p>
+
+      <div class="tab-navigation">
+        <button class="tab-btn active" onclick="switchTab(this, 'email-org')">Organizational Management Email</button>
+        <button class="tab-btn" onclick="switchTab(this, 'email-ops')">Operations Management Email</button>
+      </div>
+
+      <!-- Organizational Management Email Tab -->
+      <div id="email-org" class="tab-pane active">
+        <div class="email-body">
+          <div class="email-header-meta">
+            <strong>From:</strong> Robert W. Walker &lt;rwalker@willamette.edu&gt;<br>
+            <strong>Subject:</strong> Your Integrated Course — What Comes Next<br>
+            <strong>Target Audience:</strong> Organizational Management Students
+          </div>
+
+          <p>I promised to take the first step. Here it is.</p>
+          <p>Everything for this course lives at the course website — <a href="https://robertwwalker.github.io/Integrated622/">https://robertwwalker.github.io/Integrated622/</a> — including the three videos, with one addressed specifically to where you're coming from.</p>
+          <p>Three modules, one idea: data is the measurement of models. Each module runs roughly two weeks, with a final week for presentations. We don't collect data and wonder what it means. We build models of how organizations work, and data is how we find out whether those models are telling us the truth.</p>
+          
+          <ul class="module-list">
+            <li><strong>Module 1 — Data in organizations:</strong> vocabulary, variable types, structured and unstructured data across public, private, and nonprofit sectors.</li>
+            <li><strong>Module 2 — What you can do with data:</strong> visualization, grouping, association. What each approach can answer, and what it can't.</li>
+            <li><strong>Module 3 — Causation:</strong> Judea Pearl's causal framework. Not just what happened, but why.</li>
+          </ul>
+
+          <p>One note on timing: the third module is split by Thanksgiving week. We finish the content before the break — no deadlines hanging over the holiday, wherever you spend it. That week is for reflection. Presentations follow when we return.</p>
+          <p><strong>The project:</strong> A model of some aspect of an organization, your discipline's lens applied to it, and either real data or honest simulation to evaluate it. Simulation is not fabrication — it is a rigorous tradition in supply chain, risk modeling, and public health. The intellectual work is in the model design.</p>
+          <p><strong>The tools:</strong> AI — Claude, Gemini — as analytical partners. Plain language. No code. The tools handle the technical work. Your job is the thinking — what to ask, what the answer means, what the data cannot tell you. That is exactly the work your training has been building toward.</p>
+
+          <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid #cbd5e1;">
+
+          <p><strong>A word specifically for you.</strong></p>
+          <p>You arrive with mental models of organizations — frameworks, intuitions, observations built through your coursework. Those models make predictions. Data is how we find out whether they're telling us the truth.</p>
+          <p>The hardest work won't be the statistics. It will be translation: taking a concept like employee engagement or change readiness and deciding what it looks like as a variable. What would you measure? How would you know you're measuring the right thing? That is a conceptual challenge, not a technical one — and it is exactly what your training has prepared you for.</p>
+          <p>Your instinct that numbers don't capture everything is also correct. Pearl's framework in the third module vindicates it: the difference between two things moving together and one actually causing the other is exactly what good organizational thinking needs to hold onto.</p>
+          <p>And here is something worth naming: you are studying organizational change — and you are inside one. This course is itself a redesign. Two simultaneous changes, a non-comparable cohort, an imperfect baseline. We face exactly the question we're teaching you to ask: did it work? We don't know yet. That is not a disclaimer. It is the point.</p>
+          <p>You are arriving with a partially formed project — one your organizational management coursework has been developing. The foundation is there. What this course provides is the means to operationalize it: to define the variables, establish what you would measure, and bring your model into contact with data. We are starting from what you already know.</p>
+          <p>If you haven't yet watched the video addressed to organizational management students, it is at the course website — worth watching before our first session.</p>
+
+          <p style="margin-top: 1.5rem;">
+            rwalker@willamette.edu | Calendar open | Google Meet available<br>
+            When you reach out, tell me where you're coming from and what you're curious about — or what you're uncertain about. Either is a fine beginning.<br><br>
+            I eagerly await your puzzles.<br>
+            <strong>Robert Walker</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- Operations Management Email Tab -->
+      <div id="email-ops" class="tab-pane">
+        <div class="email-body">
+          <div class="email-header-meta">
+            <strong>From:</strong> Robert W. Walker &lt;rwalker@willamette.edu&gt;<br>
+            <strong>Subject:</strong> Your Integrated Course — What Comes Next<br>
+            <strong>Target Audience:</strong> Operations Management Students
+          </div>
+
+          <p>I promised to take the first step. Here it is.</p>
+          <p>Everything for this course lives at the course website — <a href="https://robertwwalker.github.io/Integrated622/">https://robertwwalker.github.io/Integrated622/</a> — including the three videos, with one addressed specifically to where you're coming from.</p>
+          <p>Three modules, one idea: data is the measurement of models. Each module runs roughly two weeks, with a final week for presentations. We don't collect data and wonder what it means. We build models of how organizations work, and data is how we find out whether those models are telling us the truth.</p>
+
+          <ul class="module-list">
+            <li><strong>Module 1 — Data in organizations:</strong> vocabulary, variable types, structured and unstructured data across public, private, and nonprofit sectors.</li>
+            <li><strong>Module 2 — What you can do with data:</strong> visualization, grouping, association. What each approach can answer, and what it can't.</li>
+            <li><strong>Module 3 — Causation:</strong> Judea Pearl's causal framework. Not just what happened, but why.</li>
+          </ul>
+
+          <p>One note on timing: the third module is split by Thanksgiving week. We finish the content before the break — no deadlines hanging over the holiday, wherever you spend it. That week is for reflection. Presentations follow when we return.</p>
+          <p><strong>The project:</strong> A model of some aspect of an organization, your discipline's lens applied to it, and either real data or honest simulation to evaluate it. Simulation is not fabrication — it is a rigorous tradition in supply chain, risk modeling, and public health. The intellectual work is in the model design.</p>
+          <p><strong>The tools:</strong> AI — Claude, Gemini — as analytical partners. Plain language. No code. The tools handle the technical work. Your job is the thinking — what to ask, what the answer means, what the data cannot tell you. That is exactly the work your training has been building toward.</p>
+
+          <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid #cbd5e1;">
+
+          <p><strong>Something worth knowing about where you stand.</strong></p>
+          <p>You arrive with something most students don't have: a quantitative foundation already at home with data. You understand that processes generate evidence, that evidence should inform decisions, and that the gap between what we expect and what we observe is where learning happens. That is exactly the instinct this course is trying to cultivate.</p>
+          <p>You also arrive with your organizational management foundation. Three disciplines where others have two. Your project asks you to bring an operational lens and an organizational lens together under a question that data can speak to — and that intersection is where the most interesting management questions always live.</p>
+          <p>For you, AI doesn't remove the floor — it removes the ceiling. The sophistication of the analysis you can engage with is no longer limited by what you can build from scratch. It is limited by the quality of your questions. And from where you stand — with three foundations — those questions can be genuinely wide.</p>
+          <p>I still teach panel data at the Essex Summer School for Social Science Data Analysis — the technique for tracking how things change over time across multiple units. It is precisely the methodological question this course is asking about itself. You have the foundations to see that clearly and engage with it seriously.</p>
+          <p>You are arriving with a partially formed project — questions your operations coursework has already been shaping about processes, performance, and the gap between expectation and outcome. The foundation is there. Three foundations mean the operationalization can go deeper than any single discipline had room to take it. We are starting from everything you have built.</p>
+          <p>If you haven't yet watched the video addressed to operations management students, it is at the course website — worth watching before our first session.</p>
+
+          <p style="margin-top: 1.5rem;">
+            rwalker@willamette.edu | Calendar open | Google Meet available<br>
+            When you reach out, tell me where you're coming from and what you're curious about — or what you're uncertain about. Either is a fine beginning.<br><br>
+            I eagerly await your puzzles.<br>
+            <strong>Robert Walker</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Integrated 622 &bull; Robert W. Walker &bull; <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function switchTab(btnElement, tabId) {
+      const container = btnElement.closest('.section-card');
+      const buttons = container.querySelectorAll('.tab-btn');
+      const panes = container.querySelectorAll('.tab-pane');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      panes.forEach(pane => pane.classList.remove('active'));
+
+      btnElement.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
