@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated 622 | Early Orientation & Video Hub</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .academic-serif { font-family: 'Merriweather', serif; }
+        .tab-active {
+            background-color: #ffffff;
+            color: #0f172a;
+            border-bottom: 3px solid #2563eb;
+            font-weight: 700;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Simple Header Bar -->
+    <header class="bg-navy-900 text-white border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded font-mono">622</span>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight tracking-tight">Integrated 622</h1>
+                    <p class="text-xs text-slate-400">Early Orientation & Video Portal</p>
+                </div>
+            </div>
+            <a href="https://robertwwalker.github.io/Integrated622" class="text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors">
+                <i class="fa-brands fa-github text-sm"></i>
+                <span class="hidden sm:inline">robertwwalker.github.io/Integrated622</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-10 flex-grow w-full">
+
+        <!-- Priority Notice Card -->
+        <div class="bg-amber-50/90 border-l-4 border-amber-500 rounded-r-2xl p-6 shadow-sm border-t border-r border-b border-amber-200/80">
+            <div class="flex items-start space-x-4">
+                <div class="p-3 bg-amber-100 rounded-xl text-amber-700 flex-shrink-0">
+                    <i class="fa-solid fa-envelope-open-text text-2xl"></i>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-amber-200 text-amber-900 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">Important Notice</span>
+                        <h2 class="text-lg font-bold text-slate-900">Please Stay Focused on Your Feeder Course</h2>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        If you are currently enrolled in the feeder course, <strong>please remain completely focused on completing that coursework first</strong>. 
+                    </p>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        Full syllabi and detailed schedules for Integrated 622 will be released shortly. For immediate structural context and cohort organization, <strong>please refer to the recent orientation email sent directly to your inbox</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 1: General Welcome Video -->
+        <section class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <div class="p-6 border-b border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-0.5">Part 1 &bull; Required Reading/Viewing</span>
+                    <h2 class="text-xl font-bold text-navy-900 academic-serif">Welcome & General Overview</h2>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-slate-200 text-slate-700 w-fit">
+                    <i class="fa-solid fa-users text-slate-500"></i> All Students
+                </span>
+            </div>
+
+            <div class="p-6 space-y-4">
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    This video provides an overarching introduction to Integrated 622 for all incoming students.
+                </p>
+
+                <!-- Responsive 16:9 Aspect Video Player Container -->
+                <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-900 shadow-inner">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/7Uho6crtZ_Q" 
+                        title="Integrated 622 - Welcome & General Overview" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Cohort Orientations -->
+        <section class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+            <div class="p-6 border-b border-slate-100 bg-slate-50/50">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600 block mb-0.5">Part 2 &bull; Track Specific</span>
+                <h2 class="text-xl font-bold text-navy-900 academic-serif">Cohort Specific Orientations</h2>
+                <p class="text-xs text-slate-500 mt-1">Select your assigned entrant track below to view your specific orientation video.</p>
+            </div>
+
+            <!-- Tab Switcher Header -->
+            <div class="flex border-b border-slate-200 bg-slate-100/70 p-1.5 gap-1.5">
+                <button 
+                    id="tab-org" 
+                    onclick="switchCohortTab('org')" 
+                    class="flex-1 py-3 px-4 rounded-lg text-sm font-medium text-slate-600 transition-all flex items-center justify-center gap-2 tab-active">
+                    <i class="fa-solid fa-sitemap text-blue-600"></i>
+                    <span>Organization Management</span>
+                </button>
+                <button 
+                    id="tab-ops" 
+                    onclick="switchCohortTab('ops')" 
+                    class="flex-1 py-3 px-4 rounded-lg text-sm font-medium text-slate-600 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-sliders text-indigo-600"></i>
+                    <span>Operations Management</span>
+                </button>
+            </div>
+
+            <!-- Tab 1 Panel: Organization Management -->
+            <div id="content-org" class="p-6 space-y-4">
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                    <span class="font-semibold text-slate-800">Track:</span> Organization Management Entrants
+                </div>
+                <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-900 shadow-inner">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/GB-8cHbDai0" 
+                        title="Integrated 622 - Organization Management Orientation" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Tab 2 Panel: Operations Management -->
+            <div id="content-ops" class="p-6 space-y-4 hidden">
+                <div class="flex items-center gap-2 text-xs text-slate-500">
+                    <span class="font-semibold text-slate-800">Track:</span> Operations Management Entrants
+                </div>
+                <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-900 shadow-inner">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/ht3WN9Dvp5Q" 
+                        title="Integrated 622 - Operations Management Orientation" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="bg-navy-950 text-slate-400 text-xs py-8 border-t border-navy-900">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-3">
+            <p class="text-slate-300">
+                Questions or concerns? Please refer back to your university email communications or contact your course instructor.
+            </p>
+            <p class="text-slate-500">
+                Integrated 622 &bull; <a href="https://robertwwalker.github.io/Integrated622" class="text-blue-400 hover:underline">robertwwalker.github.io/Integrated622</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Tab Switching -->
+    <script>
+        function switchCohortTab(track) {
+            const orgBtn = document.getElementById('tab-org');
+            const opsBtn = document.getElementById('tab-ops');
+            const orgContent = document.getElementById('content-org');
+            const opsContent = document.getElementById('content-ops');
+
+            if (track === 'org') {
+                orgBtn.classList.add('tab-active');
+                opsBtn.classList.remove('tab-active');
+                orgContent.classList.remove('hidden');
+                opsContent.classList.add('hidden');
+            } else {
+                opsBtn.classList.add('tab-active');
+                orgBtn.classList.remove('tab-active');
+                opsContent.classList.add('hidden');
+                opsContent.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
