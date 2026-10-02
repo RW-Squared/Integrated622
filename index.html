@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated 622 - Course Overview & Orientation Videos</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .tab-btn {
+            transition: all 0.2s ease-in-out;
+        }
+        .tab-btn.active {
+            background-color: #ffffff;
+            color: #0f172a;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-bottom: 2px solid #2563eb;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+    <!-- Top Navigation Header -->
+    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded font-mono">622</span>
+                <span class="font-semibold text-sm tracking-tight text-slate-100">Integrated 622</span>
+            </div>
+            <a href="https://robertwwalker.github.io/Integrated622" 
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-xs text-slate-400 hover:text-white flex items-center gap-1.5 transition-colors">
+                <i class="fa-brands fa-github text-sm"></i>
+                <span class="hidden sm:inline">robertwwalker.github.io/Integrated622</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-grow w-full space-y-8">
+
+        <!-- Main Page Title Header -->
+        <div class="border-b border-slate-200 pb-6">
+            <span class="text-xs font-semibold uppercase tracking-wider text-blue-600 block mb-1">Course Portal</span>
+            <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Integrated 622 - Course Overview & Orientation Videos</h1>
+        </div>
+
+        <!-- Prominent Callout Banner -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-5 sm:p-6 shadow-sm border-t border-r border-b border-amber-200/70">
+            <div class="flex items-start space-x-3.5">
+                <div class="p-2 bg-amber-100 rounded-lg text-amber-700 flex-shrink-0 mt-0.5">
+                    <i class="fa-solid fa-bullhorn text-lg"></i>
+                </div>
+                <div class="space-y-1.5">
+                    <h2 class="text-base font-bold text-amber-950">
+                        Important Notice: Focus on Your Feeder Course
+                    </h2>
+                    <p class="text-sm text-amber-900 leading-relaxed font-normal">
+                        Your current feeder coursework establishes the direct foundation for our project in Integrated 622. Please stay fully focused on mastering that material now—your effort there directly pays off in defining your project.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brief Email Note Banner -->
+        <div class="bg-white rounded-xl border border-slate-200/80 p-4 shadow-sm flex items-center space-x-3">
+            <div class="p-2 bg-slate-100 text-slate-600 rounded-lg flex-shrink-0">
+                <i class="fa-solid fa-envelope-open-text text-base"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-normal">
+                Please refer to the recent orientation email sent to your inbox regarding course structure and upcoming timeline details.
+            </p>
+        </div>
+
+        <!-- Orientation Videos Section -->
+        <div class="space-y-6 pt-2">
+            
+            <!-- 1. General Welcome Video Card -->
+            <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div class="p-5 border-b border-slate-100 bg-slate-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-blue-600 block">General Orientation</span>
+                        <h2 class="text-lg font-bold text-slate-900">General Welcome (All Entrants)</h2>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-slate-200/80 text-slate-700 w-fit">
+                        <i class="fa-solid fa-users text-xs text-slate-500"></i> All Students
+                    </span>
+                </div>
+
+                <div class="p-5 space-y-4">
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/7Uho6crtZ_Q" 
+                            title="Integrated 622 - General Welcome Video" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Track-Specific Videos (Tabbed Container) -->
+            <div class="bg-white rounded-xl border border-slate-200/80 shadow-sm overflow-hidden">
+                <div class="p-5 border-b border-slate-100 bg-slate-50/50">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-600 block">Track Orientations</span>
+                    <h2 class="text-lg font-bold text-slate-900">Track-Specific Overview Videos</h2>
+                    <p class="text-xs text-slate-500 mt-0.5">Select your designated track below to watch your specialized introduction video.</p>
+                </div>
+
+                <!-- Tab Buttons -->
+                <div class="flex border-b border-slate-200 bg-slate-100/80 p-1.5 gap-1.5">
+                    <button 
+                        id="tab-btn-org" 
+                        onclick="selectTrack('org')" 
+                        class="tab-btn active flex-1 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-medium text-slate-600 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-sitemap text-blue-600"></i>
+                        <span>Organization Management</span>
+                    </button>
+                    <button 
+                        id="tab-btn-ops" 
+                        onclick="selectTrack('ops')" 
+                        class="tab-btn flex-1 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-medium text-slate-600 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-sliders text-indigo-600"></i>
+                        <span>Operations Management</span>
+                    </button>
+                </div>
+
+                <!-- Organization Management Content -->
+                <div id="track-content-org" class="p-5 space-y-3">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span class="font-medium text-slate-700">Track: Organization Management</span>
+                    </div>
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/GB-8cHbDai0" 
+                            title="Integrated 622 - Organization Management Orientation" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Operations Management Content -->
+                <div id="track-content-ops" class="p-5 space-y-3 hidden">
+                    <div class="flex items-center justify-between text-xs text-slate-500">
+                        <span class="font-medium text-slate-700">Track: Operations Management</span>
+                    </div>
+                    <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/ht3WN9Dvp5Q" 
+                            title="Integrated 622 - Operations Management Orientation" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-2">
+            <p class="text-slate-300">
+                Integrated 622 &bull; Course Portal
+            </p>
+            <p class="text-slate-500">
+                <a href="https://robertwwalker.github.io/Integrated622" class="text-blue-400 hover:underline">https://robertwwalker.github.io/Integrated622</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function selectTrack(track) {
+            const orgBtn = document.getElementById('tab-btn-org');
+            const opsBtn = document.getElementById('tab-btn-ops');
+            const orgContent = document.getElementById('track-content-org');
+            const opsContent = document.getElementById('track-content-ops');
+
+            if (track === 'org') {
+                orgBtn.classList.add('active');
+                opsBtn.classList.remove('active');
+                orgContent.classList.remove('hidden');
+                opsContent.classList.add('hidden');
+            } else {
+                opsBtn.classList.add('active');
+                orgBtn.classList.remove('active');
+                opsContent.classList.add('hidden');
+                opsContent.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
