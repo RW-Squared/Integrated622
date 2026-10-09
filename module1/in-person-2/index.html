@@ -6,27 +6,152 @@
 <title>In-person 2 | Integrated 622</title>
 <script>try{var t=localStorage.getItem('i622-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Slab:wght@600;700&family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Figtree:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/site.css">
 <script src="../../assets/site.js" defer></script>
 </head>
 <body>
-<header class="sitebar"><div class="inner">
-<a class="brand" href="../../">Integrated 622</a>
-<nav class="nav"><a href="../../" class="">Home</a><a href="../../start/" class="">Start</a><a href="../../syllabus/" class="">Syllabus</a><a href="../../project/" class="">Project</a><a href="../../riverbend/" class="">Riverbend</a><a href="../../module1/" class="active">Module 1</a><a href="../../module2/" class="">Module 2</a><a href="../../module3/" class="">Module 3</a></nav>
+<header>
+<div class="masthead"><div class="inner">
+<a href="../../"><img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA"></a>
+<span class="rule"></span>
+<a class="course" href="../../"><span class="s">GSMPR 622 · Fall 2026</span><span class="t">Data, Statistics, and Decision Science</span></a>
+<span class="spacer"></span>
 <button class="theme-toggle" type="button" aria-label="Switch day or night theme">Night</button>
-</div></header>
+</div></div>
+<div class="sitebar"><div class="inner"><nav class="nav"><a href="../../" class="">Home</a><a href="../../start/" class="">Start</a><a href="../../models/" class="">Models</a><a href="../../syllabus/" class="">Syllabus</a><a href="../../project/" class="">Project</a><a href="../../riverbend/" class="">Riverbend</a><a href="../../module1/" class="active">Module 1</a><a href="../../module2/" class="">Module 2</a><a href="../../module3/" class="">Module 3</a></nav></div></div>
+</header>
 <main class="page">
 <nav class="crumbs"><a href="../../">Home</a> › <a href="../../module1/">Module 1</a> › In-person 2</nav>
 <div class="page-head"><div class="eyebrow">Module 1 · In person · Salem and Portland</div>
 <h1>In-person 2</h1><p class="lede">Five ways data lies; simulation; describing a variable</p><div class="badges"><span class="badge">Tue Oct 27 (Salem) · Wed Oct 28 (Portland)</span><span class="badge">6:00–9:50 pm</span><span class="badge">Salem: Renjen classroom, Salem campus · <a href="https://meet.google.com/dvx-rkng-stn">Meet</a></span><span class="badge">Portland: GPC 211, Portland · <a href="https://meet.google.com/wxz-dfka-bbd">Meet</a></span></div></div>
-<section class="card"><h2>Session plan</h2><p>The plan for this session is posted the week before it begins.</p><h3>Topics</h3><p>Five ways data lies; simulation; describing a variable</p><h3>Due</h3><ul><li>Variable table and data-source decision</li></ul></section>
+<section class="card">
+  <h2>Tonight in one sentence</h2>
+  <p>You'll name the most likely way your own data is wrong, learn to specify an honest simulation, and describe any single variable with five questions. Then your pod reads your operationalization draft. <strong>This is the one night numbers appear in Module 1</strong>, and the AI produces every one of them.</p>
+  <div class="grid2">
+    <div class="tile">
+      <h3>Before you come</h3>
+      <ul>
+        <li><strong>Due by 6:00 pm on Canvas:</strong> your variable table and your data-source decision. <em>Real:</em> a sample, or a written description of what the system holds. <em>Simulated:</em> a plain-language statement of what your model says the data should look like.</li>
+        <li>Bring a laptop with Gemini signed in to your Willamette account.</li>
+      </ul>
+    </div>
+    <div class="tile">
+      <h3>If you miss tonight</h3>
+      <p>Email me in advance. Work through this page, do "break your own data" on your own, and post your operationalization draft to your pod's thread for feedback before Online 2.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Tonight's plan</h2>
+  <div class="tw"><table>
+    <tr><th>Time</th><th>What</th></tr>
+    <tr><td><strong>6:00</strong></td><td>Reconnect: where we are, and what the Data &amp; Methods draft contains</td></tr>
+    <tr><td><strong>6:10</strong></td><td>Five ways data lies, and "break your own data"</td></tr>
+    <tr><td><strong>7:00</strong></td><td>Break</td></tr>
+    <tr><td><strong>7:15</strong></td><td>Simulation: if my model is right, what would the data look like?</td></tr>
+    <tr><td><strong>7:55</strong></td><td>Describing a variable: the five questions</td></tr>
+    <tr><td><strong>8:45</strong></td><td>Break</td></tr>
+    <tr><td><strong>9:00</strong></td><td>Project workshop with your pod</td></tr>
+    <tr><td><strong>9:45</strong></td><td>What's next</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>Five ways data lies</h2>
+  <p>Real organizational data is messy. That's not a failure of your project; it's the normal condition. These are the five ways it most often misleads, each with an example from each sector.</p>
+  <div class="tw"><table>
+    <tr><th>The way</th><th>What happens</th><th>Nonprofit</th><th>Public</th><th>Private</th></tr>
+    <tr><td><strong>Missing</strong></td><td>Values are absent, and <em>why</em> they're absent matters</td><td>Follow-up surveys come back only from clients who stayed in the program</td><td>Income is left blank most often by self-employed applicants</td><td>Customer email missing for most walk-in sales</td></tr>
+    <tr><td><strong>Mismeasured</strong></td><td>What's recorded isn't the concept</td><td>"Meals served" counts meals prepared</td><td>"Response time" starts at dispatch, not at the call</td><td>"Satisfaction" is measured as the absence of complaints</td></tr>
+    <tr><td><strong>Redefined</strong></td><td>The definition changed partway through</td><td>"Active volunteer" changed from one shift a quarter to one a month</td><td>A new case system changed when a case counts as closed</td><td>Two divisions compute turnover differently</td></tr>
+    <tr><td><strong>Selected</strong></td><td>Only some cases make it into the data</td><td>Success stories come only from graduates</td><td>Only applicants who finished the process are surveyed</td><td>Only customers who chose to post leave reviews</td></tr>
+    <tr><td><strong>Mistimed</strong></td><td>Dates are shifted, backfilled, or batched</td><td>Gifts recorded when the check clears, not when pledged</td><td>Records backfilled at fiscal year-end</td><td>Sales pulled into the quarter to meet a target</td></tr>
+  </table></div>
+  <p class="muted">The two tracks tend to know different ones. Operations people know <em>redefined</em> and <em>mistimed</em> from process data; organizational people know <em>selected</em> and <em>mismeasured</em> from surveys. Bring your best example from work.</p>
+  <h3>Activity: break your own data (15 minutes, pairs within your pod)</h3>
+  <p>For your project's key variable: <strong>which of the five is most likely, and what would you do about it?</strong> This becomes section 4 of your Data &amp; Methods draft.</p>
+</section>
+
+<section class="card">
+  <h2>Simulation: if my model is right, what would the data look like?</h2>
+  <p>Simulation is not fabrication. It's a rigorous tradition in supply chain, risk, and public health. You state your model, generate data that follows it, and look at what that data would look like. The intellectual work is in the model.</p>
+  <h3>The teaching point: you must specify noise</h3>
+  <p>A true model still produces messy data. If your simulated data falls on a perfect line, you've simulated a world that doesn't exist. Messy data is what a correct model looks like in practice.</p>
+  <h3>The rules of honest simulation</h3>
+  <ol>
+    <li><strong>Declare it.</strong> Say plainly that the data is simulated.</li>
+    <li><strong>State every assumption:</strong> units, variables, relationships, and noise.</li>
+    <li><strong>Never tune it toward the answer you want.</strong> Set it from your model, then accept what comes out.</li>
+  </ol>
+  <h3>A specification has four parts</h3>
+  <div class="prompt">Units:          each row is [one employee in one month / one site in one week / …]
+Variables:      [each variable and its kind]
+Relationships:  [what affects what, in which direction, and roughly how much]
+Noise:          [how much variation the model doesn't explain; any missing values]<button class="copy">Copy</button></div>
+  <p class="muted">You'll build your own at <a href="../../module1/online-2/">Online 2</a>, with a prompt that turns this specification into a dataset.</p>
+</section>
+
+<section class="card">
+  <h2>Describing a variable: the five questions</h2>
+  <div class="tw"><table>
+    <tr><th>#</th><th>Question</th><th>What to look at</th></tr>
+    <tr><td>1</td><td><strong>What kind of thing is it?</strong></td><td>The six kinds. This decides everything below.</td></tr>
+    <tr><td>2</td><td><strong>How many?</strong></td><td>How many values, and how many are blank</td></tr>
+    <tr><td>3</td><td><strong>Where is the middle?</strong></td><td>Median and, when it makes sense, the mean</td></tr>
+    <tr><td>4</td><td><strong>How spread out?</strong></td><td>The range, and the typical distance from the middle</td></tr>
+    <tr><td>5</td><td><strong>What shape?</strong></td><td>A histogram: the picture of one variable</td></tr>
+  </table></div>
+
+  <h3>Mean or median? One big donor</h3>
+  <p>Nine donors give $50 each and one gives $10,000. The <strong>mean</strong> gift is <strong>$1,045</strong>; the <strong>median</strong> gift is <strong>$50</strong>. Which one describes a typical donor? When one value is far from the rest, the median tells the truth and the mean tells you about the outlier.</p>
+
+  <h3>Spread, in words</h3>
+  <p>"Typical distance from the middle" is what statisticians call the <strong>standard deviation</strong>. You'll see the name; you never need the formula.</p>
+
+  <h3>The kind decides the summary</h3>
+  <div class="tw"><table>
+    <tr><th>Kind</th><th>Summarize with</th><th>Watch out for</th></tr>
+    <tr><td>Labels</td><td>Counts and shares</td><td>There is no mean of a label</td></tr>
+    <tr><td>Ordered labels</td><td>Counts by level; the median</td><td>A mean is a choice you must defend</td></tr>
+    <tr><td>Yes/No</td><td>The proportion who said yes</td><td>Say "proportion," not "average"</td></tr>
+    <tr><td>Counts</td><td>Median, mean, range</td><td>Zeros that mean "doesn't apply"</td></tr>
+    <tr><td>Measurements</td><td>Median, mean, spread, histogram</td><td>Outliers pulling the mean</td></tr>
+    <tr><td>Dates and times</td><td>Range; counts per period</td><td>Backfilled or batched dates</td></tr>
+  </table></div>
+  <p><strong>The AI produces every number. Your job is to read it and say whether it matches what your model predicted.</strong></p>
+</section>
+
+<section class="card">
+  <h2>Project workshop (45 minutes, pods)</h2>
+  <p>The Skeptic's Chair again, now with your operationalization drafts. Each Author walks through their variable table. This time the <strong>Skeptic works from the five ways data lies</strong>: which one is most likely to hit this variable?</p>
+  <div class="tw"><table>
+    <tr><th>Role</th><th>Job tonight</th></tr>
+    <tr><td><strong>Author</strong></td><td>Presents the variable table and the data-source decision (3 min)</td></tr>
+    <tr><td><strong>Translator</strong></td><td>Checks each variable's kind and proposes one alternative variable</td></tr>
+    <tr><td><strong>Skeptic</strong></td><td>Names the most likely way the data lies, and what it would look like</td></tr>
+    <tr><td><strong>Scribe</strong></td><td>Records the objections; the Author gets the last word</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>What's next</h2>
+  <ul>
+    <li><strong>Get your data into a table,</strong> real or simulated, before Thursday if you can and before Nov 3/4 regardless.</li>
+    <li><strong>Thursday:</strong> <a href="../../module1/online-2/">Online 2</a>, where you describe your own data and draft the Data &amp; Methods section.</li>
+    <li><strong><a href="../../module1/">Module 1 exercise</a>:</strong> Parts 3 and 4 use tonight's ideas. Due <strong>Sunday, November 1, 11:59 pm</strong>.</li>
+    <li><strong>Data &amp; Methods draft:</strong> due before your Module 2 kick-off, Tue Nov 3 (Salem) or Wed Nov 4 (Portland), 6:00 pm.</li>
+  </ul>
+</section>
+
 <nav class="pager"><a class="prev" href="../../module1/online-1/"><span class="dir">← Previous · Thu Oct 22, online</span><span class="t">Online 1: AI as your analyst</span></a><a class="next" href="../../module1/online-2/"><span class="dir">Next · Thu Oct 29, online →</span><span class="t">Online 2: describing your data</span></a></nav>
 </main>
-<footer class="site">
-<img src="../../assets/agsm-logo.jpeg" alt="Willamette University MBA, Atkinson Graduate School of Management"><br>
-Data, Statistics, and Decision Science · Willamette University · Atkinson Graduate School of Management · Fall 2026<br>
-Robert W. Walker · <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a> · I eagerly await your puzzles.
-</footer>
+<footer class="site"><div class="inner">
+<img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA">
+<div>Integrated 622 · Data, Statistics, and Decision Science · Fall 2026<br>
+Willamette University · Atkinson Graduate School of Management<br>
+Robert W. Walker · <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a> · I eagerly await your puzzles.</div>
+</div></footer>
 </body>
 </html>
