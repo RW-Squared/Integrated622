@@ -30,7 +30,7 @@
 <section class="card">
   <h2>Why a data course reads about projects</h2>
   <p>Element 3 of your Project Brief asks what change, decision, or intervention you want to evaluate. Most changes in organizations arrive as projects: a new system, a new schedule, a reorganization, a pilot at a few sites. Riverbend has two. <strong>SmartShift</strong> went live at three sites in 2025. <strong>The new HR information system</strong> went live the same year.</p>
-  <p>A project doesn't just cause the change you want to measure. It also decides who chose where the change happened, whose time it used up, and who keeps recording things after it ends. Those are data questions. Read this page as a map of where your data comes from, and where it is likely to break.</p>
+  <p>A project doesn't just cause the change you want to measure. Behind it are other decisions: who chose where the change happened, whose time it used up, and who keeps recording things after it ends. Those are data questions. Read this page as a map of where your data comes from, and where it is likely to break.</p>
 </section>
 
 <section class="card">
@@ -40,20 +40,20 @@
     <div class="tile"><h3>The organization side</h3><p>Strategy, funding, authority, governance. It decides which ideas get money, who is accountable, how priorities rank, and how the organization absorbs the result.</p></div>
     <div class="tile"><h3>The operations side</h3><p>Capacity, execution, schedules, daily throughput. It owns the staff, the equipment, and the queue of ongoing work, and it inherits whatever the project builds.</p></div>
   </div>
-  <p style="margin-top:1rem"><strong>A project gets its mandate and its money from the organization, and borrows its capacity from operations.</strong> Until recently, capacity meant people: their hours, their skills, their attention. A project succeeds or fails on how well that trade is negotiated.</p>
+  <p class="muted" style="margin-top:1rem">You arrive from one side of this line. Organizational management studied the left column; operations management studied the right. This is one of the places where your two courses meet, and where a project that uses both will see more than either alone.</p>
+  <p><strong>A project gets its mandate and its money from the organization, and borrows its capacity from operations.</strong> Until recently, capacity meant people: their hours, their skills, their attention. A project succeeds or fails on how well that trade is negotiated.</p>
   <details>
     <summary>The new question: what if the capacity isn't people?</summary>
     <p>Much of the excitement about <strong>agentic AI</strong>, software that carries out multistep tasks with some independence, comes from a simple recognition: some work now done by people can be allocated to something that isn't a person. Drafting, scheduling, triaging cases, reconciling records. That changes both sides of the boundary at once.</p>
     <div class="tw"><table>
       <tr><th>Side</th><th>What gets harder</th></tr>
-      <tr><td><strong>Operations</strong></td><td>Capacity is no longer only staff hours. Agents don't take overtime, but they cost money to run, fail in unfamiliar ways, and need people to check their work. Remember Mollick's <a href="../readings/#o1-mollick">jagged frontier</a> from Online 1: the same agent can be excellent on one task and quietly wrong on the next one that looks just like it, so the checking can't be skipped. Checking becomes its own queue: if agents start work faster than people can review it, the review queue grows, and Little's Law says the wait for every piece grows with it.</td></tr>
+      <tr><td><strong>Operations</strong></td><td>Capacity is no longer only staff hours. Agents don't take overtime, but they cost money to run, fail in unfamiliar ways, and need people to check their work. Remember Mollick's <a href="../readings/#o1-mollick">jagged frontier</a> from Online 1: the same agent can be excellent on one task and quietly wrong on the next one that looks just like it, so the checking can't be skipped. Checking becomes its own queue: if agents start work faster than people can review it, the review queue grows, and by Little's Law so does the average wait.</td></tr>
       <tr><td><strong>Organization</strong></td><td>The lines of authority blur. An agent isn't on the org chart. It can't be accountable, sponsor a project, or own a result when the project ends; its decisions trace back to whoever set it up. Is it a cost of labor or of software? Who answers when it gets something wrong?</td></tr>
       <tr><td><strong>The data</strong></td><td>Agents do work and write records, and records written by an agent describe what the agent did, not necessarily what happened. When the model underneath is updated, the same agent can behave differently: <em>redefined</em> data in a new form.</td></tr>
     </table></div>
     <p><strong>A Riverbend thought experiment.</strong> Suppose Riverbend handed visit documentation to an AI agent. Overtime might fall because the paperwork moved to the agent, not because anyone's workload changed. <code>documentation_errors</code> might fall too, but the agent now writes the very records that quality review checks. And <code>staff_on_roster</code> wouldn't count the agent at all. What would you need to measure to know whether it worked?</p>
     <p>You are already inside this question. All module, you have borrowed analytical capacity from an AI analyst while keeping the authority and the accountability yourself: check it, and own the thinking. No one has settled how organizations should do this at scale. If your project touches it, say plainly what your model assumes about who, or what, does the work.</p>
   </details>
-  <p class="muted">You arrive from one side of this line. Organizational management studied the left column; operations management studied the right. This is one of the places where your two courses meet, and where a project that uses both will see more than either alone.</p>
 </section>
 
 <section class="card">
@@ -63,7 +63,7 @@
     <tr><th>Interface</th><th>The project question</th><th>The data question</th><th>At Riverbend</th></tr>
     <tr><td><strong>Authority</strong></td><td>Who directs the work?</td><td>Who decided where and when the change happened, and why?</td><td>Leadership chose S1, S4, and S7 for SmartShift. Why those three? We return to this in Module 3.</td></tr>
     <tr><td><strong>Resources</strong></td><td>Where do the people and the budget come from?</td><td>Whose regular work suffered while the project ran?</td><td>Staff learning a new scheduling system still had visits to make. Look at overtime during the rollout.</td></tr>
-    <tr><td><strong>Integration</strong></td><td>Who owns the result when the project team disbands?</td><td>Who keeps measuring afterward, and the same way as before?</td><td>The HR system migration changed how things were recorded. That is <em>redefined</em> and <em>mistimed</em> data, made by a project.</td></tr>
+    <tr><td><strong>Integration</strong></td><td>Who owns the result when the project team disbands?</td><td>Who keeps measuring afterward, and the same way as before?</td><td>Riverbend moved to a new HR system in early 2025. When the system changes, what gets recorded, and when, can change with it: <em>redefined</em> or <em>mistimed</em> data, made by a project. Did it happen here? Check; don't assume.</td></tr>
   </table></div>
 </section>
 
@@ -74,7 +74,7 @@
     <tr><th>Setup</th><th>Where the work sits</th><th>What it means for the data</th></tr>
     <tr><td><strong>Functional</strong></td><td>Inside an ordinary department. The line manager keeps control of people and priorities.</td><td>The data stays in that department's systems, defined the department's way.</td></tr>
     <tr><td><strong>Matrix</strong></td><td>Shared. People report to both a project manager and a department head.</td><td>Two bosses can mean two records and two definitions of the same thing, like two divisions computing turnover differently.</td></tr>
-    <tr><td><strong>Projectized</strong></td><td>A dedicated team, pulled out of its departments. High focus, and a hard homecoming when the project ends.</td><td>Project records often leave with the team. The "after" data may have no owner.</td></tr>
+    <tr><td><strong>Projectized</strong></td><td>A dedicated team, pulled out of its departments. High focus, and a homecoming that can be hard when the project ends.</td><td>Project records often leave with the team. The "after" data may have no owner.</td></tr>
   </table></div>
   <p>Over all of this sits <strong>culture</strong>: the unwritten habits that decide how fast decisions get made, and whether a project is seen as a step forward or an unwelcome distraction. Culture shows up in data too, in who fills out the survey, who logs the extra hours, and who quietly works around the new system.</p>
 </section>
@@ -83,14 +83,14 @@
   <h2>The operations side: capacity</h2>
   <p>On the operations side, a project is a capacity problem. Larson and his coauthors distinguish two kinds:</p>
   <div class="grid2">
-    <div class="tile"><h3>Time-constrained</h3><p>The deadline is fixed. Scope or resources have to bend to meet it.</p></div>
-    <div class="tile"><h3>Resource-constrained</h3><p>A fixed pool of people limits the pace. The schedule has to bend.</p></div>
+    <div class="tile"><h3>Time-constrained</h3><p>The deadline is fixed. If the work falls behind, more people or equipment are added to meet it.</p></div>
+    <div class="tile"><h3>Resource-constrained</h3><p>The people and equipment available can't be exceeded. If they aren't enough, the schedule slips.</p></div>
   </div>
-  <p style="margin-top:1rem"><strong>Estimates are made by people with something at stake.</strong> A department head asked how long a task will take often pads the answer to protect the department's regular work. That is <em>mismeasured</em> data: what is recorded is a negotiation, not a forecast.</p>
+  <p style="margin-top:1rem"><strong>Estimates are made by people with something at stake.</strong> A department head asked how long a task will take may pad the answer to protect the department's regular work. That is <em>mismeasured</em> data: what is recorded is a negotiation, not a forecast.</p>
   <p><strong>Running work and changing work share one capacity.</strong> The hours spent running today's operations plus the hours spent changing them can't add up to more than the hours there are. Start too many projects at once and something has to give.</p>
   <h3>Little's Law, in words</h3>
-  <p>In any system where work arrives, waits, and leaves, <strong>the average amount of work in progress equals the rate at which work arrives times the average time each piece spends in the system.</strong> Throughput can't rise above capacity. So when more work is started than can finish, work piles up, and the time every piece takes grows with it. It holds for projects in a portfolio and for clients in a queue.</p>
-  <p class="muted">At Riverbend, <code>cases_opened</code> is an arrival rate and <code>median_intake_wait_days</code> is a time in the system. If referrals rise and capacity doesn't, the model predicts that waits rise too: a prediction you could check against the data.</p>
+  <p>In any stable system where work arrives, waits, and leaves, <strong>the average amount of work in progress equals the rate at which work arrives times the average time each piece spends in the system.</strong> Turn it around: the average time in the system equals the work in progress divided by the rate at which work gets finished. That rate can't rise above capacity. So when more work is started than can be finished, work in progress grows, and so does the time every piece takes. It holds for projects in a portfolio and for clients in a queue.</p>
+  <p class="muted">At Riverbend, <code>cases_opened</code> is an arrival rate, <code>median_intake_wait_days</code> is close to a time in the system (a median, where Little's Law uses an average), and <code>staff_on_roster</code> is a rough measure of capacity. If referrals rise and staffing doesn't, waits should rise too: a prediction you could check against the data.</p>
 </section>
 
 <section class="card">
@@ -116,6 +116,19 @@
   <h2>Where this fits in your MBA</h2>
   <p>A project is where the models of the MBA have to work together. Strategy says which projects are worth doing. Accounting supplies the budget. Organizational behavior explains leadership and the pull of two bosses in a matrix. Operations explains capacity and queues. See <a href="../../models/">Models and the MBA</a>. Managed well, a project isn't a disruption to the organization's routine. It is how the organization changes its routine, and that change is what your data has to catch.</p>
   <p class="muted">This page draws on Erik W. Larson, Clifford F. Gray, and Pinyarat Sirisomboonsuk, <em>Project Management: A Socio-Technical Approach</em>, 9th ed., 2024 release (McGraw Hill, 2024), the text used in the MBA's project management course. The framing around the boundary and the data questions is this course's own.</p>
+</section>
+
+<section class="card">
+  <h2>Listen, watch, and go further</h2>
+  <p>Optional. Each comes with one thing to listen or look for.</p>
+  <div class="tw"><table>
+    <tr><th>Source</th><th>What it is</th><th>Listen or look for</th></tr>
+    <tr><td><a href="https://sanalabs.com/strange-loop/ethan-mollick">"How to Build an AI-First Organization"</a><br><span class="muted">Strange Loop podcast, with Ethan Mollick, June 2025 · about an hour</span></td><td>The author of the jagged-frontier piece on how organizations should be redesigned around AI, including whether org charts built for an all-human workforce still fit.</td><td>Which side of the boundary does he think has to change first: the organization or operations?</td></tr>
+    <tr><td><a href="https://knowledge.wharton.upenn.edu/podcast/this-week-in-business/where-artificial-intelligence-stands-heading-into-2026/">"AI in 2026: What's Next?"</a><br><span class="muted">Knowledge at Wharton podcast, late 2025</span></td><td>A shorter, more sober update. Mollick argues AI probably had not yet caused large-scale changes in the labor market, and that the hard part is reworking processes inside organizations.</td><td>The gap between what agents can do and what organizations have reorganized to let them do. Where would that gap show up in data?</td></tr>
+    <tr><td><a href="https://web-assets.bcg.com/dc/c5/1bcbfdc0405c85fb14972a57c20a/the-emerging-agentic-enterprise-how-leaders-must-navigate-a-new-age-of-ai.pdf">"The Emerging Agentic Enterprise"</a><br><span class="muted">MIT Sloan Management Review and BCG, November 2025 · free report</span></td><td>A survey of more than 2,000 executives. Its central claim: agentic AI is neither a tool nor a teammate, which is why it fits existing ways of managing so badly.</td><td>Read the summary, then ask the Skeptic's question: it's a survey of executives, so what can it tell you, and what can't it?</td></tr>
+    <tr><td><a href="https://www.coursera.org/learn/wharton-operations">"Introduction to Operations Management"</a><br><span class="muted">Christian Terwiesch, Wharton, on Coursera · video lectures</span></td><td>A widely used introduction to process analysis that covers Little's Law with worked examples. Operations-track students will recognize it.</td><td>Organizational track: watch the Little's Law lecture and find one process in your project it applies to.</td></tr>
+    <tr><td><a href="http://web.eng.ucsd.edu/~massimo/ECE158A/Handouts_files/Little.pdf">"Little's Law"</a><br><span class="muted">John D. C. Little and Stephen C. Graves, in <em>Building Intuition</em> (Springer, 2008), 81–100</span></td><td>The law explained by the man it is named for and a colleague, starting from what a manager measures. Skip the proofs.</td><td>Find their conditions for when the law holds. Does a Riverbend site in the middle of a rollout meet them?</td></tr>
+  </table></div>
 </section>
 
 <nav class="pager"><a class="prev" href="../readings/#online2"><span class="dir">← Readings</span><span class="t">Read before Online 2</span></a><a class="next" href="../online-2/"><span class="dir">Session →</span><span class="t">Online 2: describing your data</span></a></nav>
