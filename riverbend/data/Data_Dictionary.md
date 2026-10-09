@@ -23,7 +23,7 @@ Also in early 2025, Riverbend **moved to a new HR information system**.
 |---|---|---|
 | **One row is** | one employee in one quarter | one site in one week |
 | **Rows** | 3,215 | 832 (8 sites × 104 weeks) |
-| **Comes from** | HR information system, payroll, annual engagement survey | Case management system, scheduling, client surveys |
+| **Comes from** | HR information system, payroll, quarterly engagement survey | Case management system, scheduling, client surveys |
 
 **How they connect:** both tables have `site_id` and `quarter`. A quarter contains about 13 weeks. Before you combine the tables, decide what a row of the combined table should be.
 
@@ -41,7 +41,7 @@ Also in early 2025, Riverbend **moved to a new HR information system**.
 | `job_level` | Job level, 1 (entry) to 4 (senior) |
 | `employment_type` | Full-time or Part-time |
 | `hire_date` | Date of hire, as recorded in the HR system |
-| `tenure_years` | Years since hire, at the start of the quarter |
+| `tenure_years` | Years since hire, at the start of the quarter (0 for employees hired during the quarter) |
 | `age_band` | Under 30, 30–39, 40–49, 50+ |
 | `pay_hourly` | Hourly pay rate in dollars |
 | `commute_miles` | One-way distance from home to site, in miles |

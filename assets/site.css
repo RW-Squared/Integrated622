@@ -34,13 +34,7 @@
   --accent: var(--gold); --border: #3a3a3a; --soft: #2b2b2b; --reveal: #2e2a1a; --reveal-border: #6d5d1f;
   --code-bg: #0e0e0e; --code-text: #f5f5f5; --shadow: none;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #161616; --card: #212121; --text: #ececec; --muted: #b5b0a6; --heading: #ffffff; --link: var(--gold);
-    --accent: var(--gold); --border: #3a3a3a; --soft: #2b2b2b; --reveal: #2e2a1a; --reveal-border: #6d5d1f;
-    --code-bg: #0e0e0e; --code-text: #f5f5f5; --shadow: none;
-  }
-}
+/* Light by default, like willamette.edu; dark only when the reader chooses it with the toggle. */
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; }

@@ -5,8 +5,7 @@
   try { const t = localStorage.getItem('i622-theme'); if (t) root.setAttribute('data-theme', t); } catch (e) {}
   document.addEventListener('DOMContentLoaded', () => {
     const btn = document.querySelector('.theme-toggle');
-    const isDark = () => root.getAttribute('data-theme') === 'dark' ||
-      (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const isDark = () => root.getAttribute('data-theme') === 'dark';
     const label = () => { if (btn) btn.textContent = isDark() ? 'Day' : 'Night'; };
     label();
     if (btn) btn.addEventListener('click', () => {
