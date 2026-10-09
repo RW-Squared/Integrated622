@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online 1: AI as your analyst | Integrated 622</title>
+<script>try{var t=localStorage.getItem('i622-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Slab:wght@600;700&family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<header class="sitebar"><div class="inner">
+<a class="brand" href="../../">Integrated 622</a>
+<nav class="nav"><a href="../../" class="">Home</a><a href="../../start/" class="">Start</a><a href="../../syllabus/" class="">Syllabus</a><a href="../../project/" class="">Project</a><a href="../../riverbend/" class="">Riverbend</a><a href="../../module1/" class="active">Module 1</a><a href="../../module2/" class="">Module 2</a><a href="../../module3/" class="">Module 3</a></nav>
+<button class="theme-toggle" type="button" aria-label="Switch day or night theme">Night</button>
+</div></header>
+<main class="page">
+<nav class="crumbs"><a href="../../">Home</a> › <a href="../../module1/">Module 1</a> › Online 1: AI as your analyst</nav>
+<div class="page-head"><div class="eyebrow">Module 1 · Online · both cohorts</div>
+<h1>Online 1: AI as your analyst</h1><p class="lede">AI as analyst: interrogating a dataset; measures for your own concepts</p><div class="badges"><span class="badge">Thu Oct 22, online</span><span class="badge">6:00–8:15 pm (may run to 8:30)</span><span class="badge"><a href="https://meet.google.com/knh-gxyw-uwr">Google Meet</a></span><span class="badge">Recording: posted after the session</span></div></div>
+<section class="card">
+  <h2>Tonight in one sentence</h2>
+  <p>We ask an AI analyst four questions about a dataset, watch where its answers need a human decision, and learn the one question that governs every join: <strong>what is a row?</strong></p>
+  <div class="grid2">
+    <div class="tile">
+      <h3>Joining live</h3>
+      <p>Have Gemini open in a browser tab, signed in with your <strong>Willamette</strong> account, and the two data files downloaded. Follow along below as we go.</p>
+    </div>
+    <div class="tile">
+      <h3>Catching up later</h3>
+      <p>Watch the recording, then work through this page top to bottom. Every activity works on your own time. <strong>Post to your pod's thread by Sunday night</strong>, and reply to one pod-mate.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Before you start</h2>
+  <ul class="check">
+    <li><input type="checkbox" id="c1"><label for="c1">Download <a href="../../riverbend/data/staff_quarters.csv" download>staff_quarters.csv</a> and <a href="../../riverbend/data/site_weeks.csv" download>site_weeks.csv</a>, and skim the <a href="../../riverbend/">data dictionary</a>.</label></li>
+    <li><input type="checkbox" id="c2"><label for="c2">Open <a href="https://gemini.google.com">Gemini</a> signed in with your <strong>Willamette</strong> account, not a personal Gmail.</label></li>
+    <li><input type="checkbox" id="c3"><label for="c3">Start a new chat and upload both CSV files.</label></li>
+  </ul>
+  <p class="muted">Stuck on any of these? The <a href="https://robertwwalker.github.io/TJTechReady/">TechReady</a> modules on files and the cloud will help, or email rwalker@willamette.edu.</p>
+</section>
+
+<section class="card">
+  <h2>Tonight's plan</h2>
+  <div class="tw"><table>
+    <tr><th>Time</th><th>What</th><th>If you're catching up</th></tr>
+    <tr><td><strong>6:00</strong></td><td>Kinds of variables: five rows from your own variable tables</td><td>Read the posted key</td></tr>
+    <tr><td><strong>6:25</strong></td><td>Live demo: Walker works with Gemini on the Riverbend data</td><td>Watch the recording, or replay the prompts below</td></tr>
+    <tr><td><strong>7:00</strong></td><td>Hands-on: your turn with the prompt card</td><td>Same steps, on your own time</td></tr>
+    <tr><td><strong>7:35</strong></td><td>Pod thread: one AI-suggested measure you'd accept, one you'd reject</td><td>Post by Sunday night</td></tr>
+    <tr><td><strong>8:05</strong></td><td>Shares and what's next</td><td>See "Before In-person 2" below</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>The demo, step by step</h2>
+  <p>These are the prompts used live. Paste each into your own Gemini chat. <strong>Think about the question in bold before you open "What we found."</strong> Gemini's wording will differ from ours, but the numbers should match.</p>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D1</span><h3>What's in here?</h3></div>
+    <div class="prompt">I've uploaded two files from a fictional nonprofit called Riverbend Community Services. What is in each file? How many rows and columns does each have?<button class="copy">Copy</button></div>
+    <p class="think">Does the AI's count match the data dictionary?</p>
+    <details><summary>What we found</summary>
+      <p><code>staff_quarters</code> has 3,215 rows × 18 columns. <code>site_weeks</code> has 832 rows × 14 columns. Check the AI's numbers against something you know before trusting anything else it says.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D2</span><h3>What is a row?</h3></div>
+    <div class="prompt">What does one row of each file represent? How many different employees are in staff_quarters?<button class="copy">Copy</button></div>
+    <div class="prompt">What is the largest commute_miles value, and how many rows have it?<button class="copy">Copy</button></div>
+    <p class="think">Is staff_quarters 3,215 people? If you averaged commute across rows, who would count more than once?</p>
+    <details><summary>What we found</summary>
+      <p>One row is <strong>one employee in one quarter</strong>, and one site in one week. There are only <strong>728 different employees</strong>, because a person can appear in up to 8 rows. The longest commute, 108.2 miles, belongs to one person and shows up once for each quarter they were employed. <strong>What a row is decides what an average means.</strong></p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D3</span><h3>What kind of variable? Then: what's the average engagement?</h3></div>
+    <div class="prompt">For each column in staff_quarters, what kind of variable is it?<button class="copy">Copy</button></div>
+    <div class="prompt">What is the average engagement score?<button class="copy">Copy</button></div>
+    <p class="think">Engagement is a 1–5 survey rating. What did the AI assume when it averaged it? What did it do with the blanks? If it gave you more than one average, which one is "the" answer?</p>
+    <details><summary>What we found</summary>
+      <p>Gemini reported a mean of <strong>3.11</strong> and a median of 3. It noted 1,116 blank rows (35%), and averages leave blanks out. It also offered a second average, <strong>2.80</strong>, computed per employee rather than per row.</p>
+      <p>Both are correct, and they answer different questions: "what is a typical quarter like?" versus "what is a typical employee like?" They differ because people who stay longer are more engaged and appear in more rows. Staff present 6–8 quarters average 3.68, while staff present 1–2 quarters average 2.40. And would you tell your board engagement is "3.1096"? A 1–5 rating is an <em>ordered label</em>. Counts by level, or the median, are usually more honest than a mean.</p>
+      <p><strong>The lesson:</strong> the AI was careful and still made choices for you. Choosing is your job.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D4</span><h3>What's the average caseload, and is there a "typical" one?</h3></div>
+    <div class="prompt">What is the average caseload?<button class="copy">Copy</button></div>
+    <div class="prompt">Break caseload down by role and by full-time vs part-time, for the roles that carry a caseload.<button class="copy">Copy</button></div>
+    <p class="think">Does a zero mean "none" or "doesn't apply"? Which number would you put in a memo to leadership?</p>
+    <details><summary>What we found</summary>
+      <p>Across all rows the average is about <strong>14.3</strong>. But 1,086 rows are zero because Drivers, Admins, Supervisors, and Intake Coordinators don't carry a caseload. Those zeros mean "doesn't apply." Leave them out and the average is about <strong>21.6</strong>. Even that blends very different jobs:</p>
+      <div class="tw"><table>
+        <tr><th>Role</th><th>Full-time</th><th>Part-time</th></tr>
+        <tr><td>Case Manager</td><td>32.1</td><td>17.8</td></tr>
+        <tr><td>Nurse</td><td>23.2</td><td>13.3</td></tr>
+        <tr><td>Home Health Aide</td><td>19.2</td><td>11.1</td></tr>
+      </table></div>
+      <p>There is no "typical" caseload. If leadership's real question is "is the workload fair?", the measure they need is caseload by role, adjusted for full-time equivalent. That's an <strong>operationalization</strong> decision, not an arithmetic one.</p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D5</span><h3>The first join, and the trap</h3></div>
+    <p>Leadership asks whether urban, suburban, or rural sites have more turnover. Turnover lives in one file and site type lives in the other, so we have to combine them.</p>
+    <div class="prompt">For each site, show its site_type and its turnover rate: the share of staff_quarters rows with left_org = 1. Explain in plain words how you combined the two files, and show the SQL or the steps.<button class="copy">Copy</button></div>
+    <div class="prompt">What would happen if I joined staff_quarters to site_weeks directly on site_id, without first reducing site_weeks to one row per site?<button class="copy">Copy</button></div>
+    <p class="think">What did the AI do to site_weeks <em>before</em> joining? Why did it need to?</p>
+    <details><summary>What we found</summary>
+      <p>Gemini first reduced the 832 weekly rows to <strong>8, one per site</strong>, and then matched on <code>site_id</code>. That one step is the lesson.</p>
+      <p>Joined directly, every staff row is copied 104 times, once per week, giving <strong>334,360 rows</strong>. The joined table counts 39,624 departures instead of 381. The turnover <em>rate</em> still comes out right (11.9%) only because every row was copied the same number of times. A wrong table that gives some right answers is the one you end up trusting.</p>
+      <p><strong>Before you join, decide what one row of the result should be.</strong></p>
+    </details>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">D6</span><h3>Audit the data, then audit the audit</h3></div>
+    <div class="prompt">Looking at both files, what seems odd, missing, or worth checking before anyone analyzes this data? Check every column, and explain what you think causes each issue.<button class="copy">Copy</button></div>
+    <p class="think">An audit is a list of claims. Which of these claims have you actually checked?</p>
+    <details><summary>The one we checked together</summary>
+      <p>Gemini flagged 14 pay decreases. We asked which sites those people moved between, and whether their job level changed. Every one was a staff member who <strong>transferred to a lower-paid site</strong> at the same level. That's not an error. Riverbend pays differently by site. <strong>Odd isn't the same as wrong.</strong></p>
+      <p>The rest of the AI's list is yours to judge in <strong>Part 4 of the <a href="../../module1/">Module 1 exercise</a></strong>: some of its explanations hold up, some don't, and it misses something important.</p>
+    </details>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Your turn: the prompt card</h2>
+  <p>About 35 minutes. Work alone or with a partner. Keep your Gemini chat; you will want it for the exercise.</p>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">1</span><h3>What's in here?</h3></div>
+    <div class="prompt">What is in each of these files? How many rows and columns does each have?<button class="copy">Copy</button></div>
+    <p>Check: does it match the data dictionary?</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">2</span><h3>What is a row?</h3></div>
+    <div class="prompt">What does one row of each file represent? How many different employees are in staff_quarters?<button class="copy">Copy</button></div>
+    <p>Write one sentence in your own words for each file.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">3</span><h3>What kind of variable, and what's odd?</h3></div>
+    <div class="prompt">For each column in site_weeks, tell me which kind it is: labels, ordered labels, yes/no, counts, measurements, or dates and times. Give a one-line reason.<button class="copy">Copy</button></div>
+    <p>Find <strong>one</strong> answer you disagree with, or at least question.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="step-num">4</span><h3>Your own project</h3></div>
+    <p>Fill in the two blanks and copy the prompt. Nothing you type here is saved or sent anywhere; it stays in your browser.</p>
+    <div class="builder">
+      <label for="concept">A concept from your project</label>
+      <input id="concept" data-key="concept" data-blank="[your concept]" placeholder="e.g., employee engagement, process reliability, change readiness">
+      <label for="org">The organization, briefly and without confidential details</label>
+      <input id="org" data-key="org" data-blank="[a short, non-confidential description]" placeholder="e.g., a county social services office with 40 caseworkers">
+    </div>
+    <div class="prompt" data-template="Here is a concept from my project: {concept}. The organization is {org}. Give me five ways this concept could be measured, the kind of variable each would be, and what each would miss.">Here is a concept from my project.<button class="copy">Copy</button></div>
+    <p>Choose <strong>one measure you would accept</strong> and <strong>one you would reject</strong>, and say why. Rejections are often the more interesting post.</p>
+    <div class="notice">Leave out names and confidential details about your workplace. Gemini with your Willamette account keeps your data out of model training, but your employer's rules still apply.</div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Pod thread</h2>
+  <p>Post to your pod's thread:</p>
+  <ol>
+    <li><strong>One AI-suggested measure you would accept</strong> for your concept, and why.</li>
+    <li><strong>One you would reject</strong>, and why.</li>
+  </ol>
+  <p><strong>Catching up?</strong> Post by <strong>Sunday night</strong> and reply to one pod-mate. Your pod's thread is linked on Canvas.</p>
+</section>
+
+<section class="card">
+  <h2>Before In-person 2 (Oct 27 Salem · Oct 28 Portland)</h2>
+  <ul>
+    <li><strong>Decide your data source.</strong> <em>Real:</em> a sample, or a written description of what the system holds. <em>Simulated:</em> a plain-language specification of what your model says the data should look like.</li>
+    <li><strong>Module 1 exercise:</strong> Parts 1, 2, and 5 are ready to finish this weekend. Parts 3 and 4 come after In-person 2. Due <strong>Sunday, November 1, 11:59 pm</strong>.</li>
+  </ul>
+</section>
+
+<nav class="pager"><a class="prev" href="../../module1/in-person-1/"><span class="dir">← Previous · Tue Oct 20 (Salem) · Wed Oct 21 (Portland)</span><span class="t">Module 1 kick-off</span></a><a class="next" href="../../module1/in-person-2/"><span class="dir">Next · Tue Oct 27 (Salem) · Wed Oct 28 (Portland) →</span><span class="t">In-person 2</span></a></nav>
+</main>
+<footer class="site">
+<img src="../../assets/agsm-logo.jpeg" alt="Willamette University MBA, Atkinson Graduate School of Management"><br>
+Data, Statistics, and Decision Science · Willamette University · Atkinson Graduate School of Management · Fall 2026<br>
+Robert W. Walker · <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a> · I eagerly await your puzzles.
+</footer>
+</body>
+</html>
