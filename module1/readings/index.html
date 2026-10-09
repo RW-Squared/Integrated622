@@ -62,8 +62,9 @@
       <span class="muted">Optional: a Monte Carlo simulation with Gemini</span></td><td>About 2 hours</td></tr>
     <tr><td><a href="#online2">Online 2</a><br><span class="muted">Thu Oct 29</span></td><td>
       <a href="#o2-gebru">Gebru et al., "Datasheets for Datasets"</a> <span class="muted">(open)</span><br>
+      <a href="#o2-larson">Projects at the boundary</a> <span class="muted">(course site)</span><br>
       <a href="#o2-box">Box, "Science and Statistics"</a> <span class="muted">(open)</span><br>
-      <span class="muted">Optional: Hubbard, ch. 4</span></td><td>About 1¾ hours</td></tr>
+      <span class="muted">Optional: Hubbard, ch. 4</span></td><td>About 2¼ hours</td></tr>
   </table></div>
 </section>
 
@@ -274,7 +275,7 @@
 <section class="card" id="online2">
   <div class="eyebrow">Read before Online 2 · Thu Oct 29</div>
   <h2>Documenting your data, and holding it up against your model</h2>
-  <p>At Online 2 you draft the Data &amp; Methods section. The first reading is a checklist for documenting a dataset. The second is a classic on how a model and data talk to each other, and on which of a model's flaws are worth worrying about.</p>
+  <p>At Online 2 you draft the Data &amp; Methods section. The first reading is a checklist for documenting a dataset. The second asks where the change you are studying came from, and what it did to the data. The third is a classic on how a model and data talk to each other, and on which of a model's flaws are worth worrying about.</p>
 
   <h3 id="o2-gebru" style="margin-top:1.4rem">1. Gebru et al.: datasheets for datasets</h3>
   <p>Timnit Gebru, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé III, and Kate Crawford, "Datasheets for Datasets," <em>Communications of the ACM</em> 64, no. 12 (2021): 86–92. <a href="https://doi.org/10.1145/3458723">Journal version</a> · <a href="https://arxiv.org/abs/1803.09010">Free version</a>.</p>
@@ -297,7 +298,27 @@
     <p class="muted">For the Module 1 exercise reflection: what would a datasheet for Riverbend say that its data dictionary doesn't?</p>
   </div>
 
-  <h3 id="o2-box" style="margin-top:1.4rem">2. Box: science and statistics</h3>
+  <h3 id="o2-larson" style="margin-top:1.4rem">2. Projects at the boundary</h3>
+  <p>This site's <a href="../projects/">Projects at the boundary</a> page, drawing on Larson, Gray, and Sirisomboonsuk, <em>Project Management: A Socio-Technical Approach</em> (McGraw Hill, 2024).</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Course site</span><span class="badge">About 30 minutes, with the guide</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Most of the changes your Brief could evaluate arrive as projects. A project decides where a change happens, whose time it uses, and who keeps measuring once it ends, and each of those leaves a mark on your data. It is also where your two prior courses meet: organizational management on one side of the boundary, operations management on the other.</p>
+  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Is your change a project? (3 minutes)</h3></div>
+    <p>Write down the change your Brief evaluates. Who authorized it? Whose people carried it out? If you don't know, write that down too.</p>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li><strong>The two sides.</strong> For each data source in your variable table, which side of the boundary owns it: the organization or operations?</li>
+      <li><strong>Three interfaces.</strong> Answer the three data questions (authority, resources, integration) for your own change, as the page does for Riverbend.</li>
+      <li><strong>Setups.</strong> Is your organization functional, matrix, or projectized for the change you're studying? What does that predict about where its records live and how they're defined?</li>
+      <li><strong>Little's Law.</strong> Find something in your project that arrives, waits, and leaves: cases, orders, tickets, applications. What is its arrival rate, and what is its time in the system?</li>
+      <li><strong>Acceptance criteria.</strong> Which part of your Brief plays the role of acceptance criteria agreed at the start?</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Before, during, after (10 minutes)</h3></div>
+    <p>Write two sentences for your Data &amp; Methods draft. First: who owns your data before, during, and after the change. Second: what the change itself may have done to how things are recorded. They belong in section 3 or 4.</p>
+  </div>
+
+  <h3 id="o2-box" style="margin-top:1.4rem">3. Box: science and statistics</h3>
   <p>George E. P. Box, "Science and Statistics," <em>Journal of the American Statistical Association</em> 71, no. 356 (1976): 791–799. <a href="https://users.cla.umn.edu/~nwaller/prelim/boxscienceandstatistics.pdf">Free PDF</a> · <a href="https://doi.org/10.1080/01621459.1976.10480949">Journal version</a>.</p>
   <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 45 minutes</span></div>
   <p style="margin-top:.8rem"><strong>Why this reading.</strong> This is where "all models are wrong" comes from, and the sentence that follows it is the more useful one. Box describes learning as a back-and-forth between a model and data: the model says what to look for, the data pushes back, the model improves. That is the loop between the two models of your project. Skip any passage that turns mathematical; the argument is in the prose.</p>
