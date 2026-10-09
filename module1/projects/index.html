@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects at the boundary | Integrated 622</title>
+<script>try{var t=localStorage.getItem('i622-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Figtree:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/site.js" defer></script>
+</head>
+<body>
+<header>
+<div class="masthead"><div class="inner">
+<a href="../../"><img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA"></a>
+<span class="rule"></span>
+<a class="course" href="../../"><span class="s">GSMPR 622 · Fall 2026</span><span class="t">Data, Statistics, and Decision Science</span></a>
+<span class="spacer"></span>
+<button class="theme-toggle" type="button" aria-label="Switch day or night theme">Night</button>
+</div></div>
+<div class="sitebar"><div class="inner"><nav class="nav"><a href="../../" class="">Home</a><a href="../../start/" class="">Start</a><a href="../../models/" class="">Models</a><a href="../../syllabus/" class="">Syllabus</a><a href="../../project/" class="">Project</a><a href="../../riverbend/" class="">Riverbend</a><a href="../../module1/" class="active">Module 1</a><a href="../../module2/" class="">Module 2</a><a href="../../module3/" class="">Module 3</a></nav></div></div>
+</header>
+<main class="page">
+<nav class="crumbs"><a href="../../">Home</a> › <a href="../../module1/">Module 1</a> › <a href="../readings/#online2">Readings</a> › Projects at the boundary</nav>
+<div class="page-head"><div class="eyebrow">Module 1 · Reading for Online 2</div>
+<h1>Projects at the boundary</h1><p class="lede">You have a project; how should it be managed and evaluated? Where a project sits between the organization and its operations decides what data exists about it. The analysis closes the loop, almost always incompletely.</p>
+<div class="badges"><span class="badge">About 15 minutes, plus optional panels</span><span class="badge"><a href="../readings/#o2-larson">Reading guide</a></span></div></div>
+
+<section class="card">
+  <h2>Why a data course reads about projects</h2>
+  <p>You have a project. Element 3 of your Project Brief names a change, decision, or intervention to evaluate, and in organizations most changes arrive as projects: a new system, a new schedule, a reorganization, a pilot at a few sites. Riverbend has two. <strong>SmartShift</strong> went live at three sites in January 2025, and Riverbend moved to <strong>a new HR information system</strong> in early 2025 as well. Two changes at once: anything that moved in 2025 could belong to either. (This course is in the same position. It is a redesign with two simultaneous changes, and we face the same question you do: did it work?)</p>
+  <p>Managing a project and evaluating it are usually treated as separate jobs. They aren't. How a project is run decides who chose where the change happened, whose time it used up, and who keeps recording things after it ends, and those decisions make the data the evaluation depends on. Read this page as a map of where your data comes from, and where it is likely to break.</p>
+</section>
+
+<section class="card">
+  <h2>A project lives on a boundary</h2>
+  <p>A project begins when a permanent organization authorizes work it can't do in its day-to-day operations. It ends when that work is handed back as something the organization can actually run. In between, it sits on the boundary between two systems that speak different languages and run on different rules.</p>
+  <div class="grid2">
+    <div class="tile"><h3>The organization side</h3><p>Strategy, funding, authority, governance. It decides which ideas get money, who is accountable, how priorities rank, and how the organization absorbs the result.</p></div>
+    <div class="tile"><h3>The operations side</h3><p>Capacity, execution, schedules, daily throughput. It owns the staff, the equipment, and the queue of ongoing work, and it inherits whatever the project builds.</p></div>
+  </div>
+  <p class="muted" style="margin-top:1rem">You arrive from one side of this line. Organizational management studied the left column; operations management studied the right. This is one of the places where your two courses meet, and where a project that uses both will see more than either alone.</p>
+  <p><strong>A project gets its mandate and its money from the organization, and borrows its capacity from operations.</strong> Until recently, capacity meant people: their hours, their skills, their attention. A project succeeds or fails on how well that trade is negotiated.</p>
+  <details>
+    <summary>The new question: what if the capacity isn't people?</summary>
+    <p>Much of the excitement about <strong>agentic AI</strong>, software that carries out multistep tasks with some independence, comes from a simple recognition: some work now done by people can be allocated to something that isn't a person. Drafting, scheduling, triaging cases, reconciling records. That changes both sides of the boundary at once.</p>
+    <div class="tw"><table>
+      <tr><th>Side</th><th>What gets harder</th></tr>
+      <tr><td><strong>Operations</strong></td><td>Capacity is no longer only staff hours. Agents don't take overtime, but they cost money to run, fail in unfamiliar ways, and need people to check their work. Remember Mollick's <a href="../readings/#o1-mollick">jagged frontier</a> from Online 1: the same agent can be excellent on one task and quietly wrong on the next one that looks just like it, so the checking can't be skipped. Checking becomes its own queue: if agents start work faster than people can review it, the review queue grows, and by Little's Law so does the average wait.</td></tr>
+      <tr><td><strong>Organization</strong></td><td>The lines of authority blur. An agent isn't on the org chart. It can't be accountable, sponsor a project, or own a result when the project ends; its decisions trace back to whoever set it up. Is it a cost of labor or of software? Who answers when it gets something wrong?</td></tr>
+      <tr><td><strong>The data</strong></td><td>Agents do work and write records, and records written by an agent describe what the agent did, not necessarily what happened. When the model underneath is updated, the same agent can behave differently: <em>redefined</em> data in a new form.</td></tr>
+    </table></div>
+    <p><strong>A Riverbend thought experiment.</strong> Suppose Riverbend handed visit documentation to an AI agent. Overtime might fall because the paperwork moved to the agent, not because anyone's workload changed. <code>documentation_errors</code> might fall too, but the agent now writes the very records that quality review checks. And <code>staff_on_roster</code> wouldn't count the agent at all. What would you need to measure to know whether it worked?</p>
+    <p>You are already inside this question. All module, you have borrowed analytical capacity from an AI analyst while keeping the authority and the accountability yourself: check it, and own the thinking. No one has settled how organizations should do this at scale. If your project touches it, say plainly what your model assumes about who, or what, does the work.</p>
+  </details>
+</section>
+
+<section class="card">
+  <h2>Three interfaces, three data questions</h2>
+  <p>Any project has to settle three things with its parent organization. Each one leaves a mark on the data.</p>
+  <div class="tw"><table>
+    <tr><th>Interface</th><th>The project question</th><th>The data question</th><th>At Riverbend</th></tr>
+    <tr><td><strong>Authority</strong></td><td>Who directs the work?</td><td>Who decided where and when the change happened, and why?</td><td>S1, S4, and S7 got SmartShift; the other five sites didn't. Who chose them, and why? We return to this in Module 3.</td></tr>
+    <tr><td><strong>Resources</strong></td><td>Where do the people and the budget come from?</td><td>Whose regular work suffered while the project ran?</td><td>Staff learning a new scheduling system still had visits to make. Look at overtime during the rollout.</td></tr>
+    <tr><td><strong>Integration</strong></td><td>Who owns the result when the project team disbands?</td><td>Who keeps measuring afterward, and the same way as before?</td><td>Riverbend moved to a new HR system in early 2025. When the system changes, what gets recorded, and when, can change with it: <em>redefined</em> or <em>mistimed</em> data, made by a project. Did it happen here? Check; don't assume.</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>How organizations set projects up</h2>
+  <p>Where a project sits in the organization chart shapes who controls it, and also where its records live.</p>
+  <div class="tw"><table>
+    <tr><th>Setup</th><th>Where the work sits</th><th>What it means for the data</th></tr>
+    <tr><td><strong>Functional</strong></td><td>Inside an ordinary department. The line manager keeps control of people and priorities.</td><td>The data stays in that department's systems, defined the department's way.</td></tr>
+    <tr><td><strong>Matrix</strong></td><td>Shared. People report to both a project manager and a department head.</td><td>Two bosses can mean two records and two definitions of the same thing, like two divisions computing turnover differently.</td></tr>
+    <tr><td><strong>Projectized</strong></td><td>A dedicated team, pulled out of its departments. High focus, and a homecoming that can be hard when the project ends.</td><td>Project records often leave with the team. The "after" data may have no owner.</td></tr>
+  </table></div>
+  <p>Over all of this sits <strong>culture</strong>: the unwritten habits that decide how fast decisions get made, and whether a project is seen as a step forward or an unwelcome distraction. Culture shows up in data too, in who fills out the survey, who logs the extra hours, and who quietly works around the new system.</p>
+</section>
+
+<section class="card">
+  <h2>The operations side: capacity</h2>
+  <p>On the operations side, a project is a capacity problem. Larson and his coauthors distinguish two kinds:</p>
+  <div class="grid2">
+    <div class="tile"><h3>Time-constrained</h3><p>The deadline is fixed. If the work falls behind, more people or equipment are added to meet it.</p></div>
+    <div class="tile"><h3>Resource-constrained</h3><p>The people and equipment available can't be exceeded. If they aren't enough, the schedule slips.</p></div>
+  </div>
+  <p style="margin-top:1rem"><strong>Estimates are made by people with something at stake.</strong> A department head asked how long a task will take may pad the answer to protect the department's regular work. That is <em>mismeasured</em> data: what is recorded is a negotiation, not a forecast.</p>
+  <p><strong>Running work and changing work share one capacity.</strong> The hours spent running today's operations plus the hours spent changing them can't add up to more than the hours there are. Start too many projects at once and something has to give.</p>
+  <h3>Little's Law, in words</h3>
+  <p>In any stable system where work arrives, waits, and leaves, <strong>the average amount of work in progress equals the rate at which work arrives times the average time each piece spends in the system.</strong> Turn it around: the average time in the system equals the work in progress divided by the rate at which work gets finished. That rate can't rise above capacity. So when more work is started than can be finished, work in progress grows, and so does the time every piece takes. It holds for projects in a portfolio and for clients in a queue.</p>
+  <p class="muted">At Riverbend, <code>cases_opened</code> is an arrival rate, <code>median_intake_wait_days</code> is close to a time in the system (a median, where Little's Law uses an average), and <code>staff_on_roster</code> is a rough measure of capacity. If referrals rise and staffing doesn't, waits should rise too: a prediction you could check against the data.</p>
+</section>
+
+<section class="card">
+  <h2>Start with the end</h2>
+  <p>Closing a project is more than delivering a final report. Real closure means confirming the scope was met, training the people who will run the result, handing over the documentation, returning borrowed staff, and recording what was learned. The way to make that go smoothly is to settle two things <strong>at the start</strong>: who will run the result on its first day, and what objective criteria will count as success.</p>
+  <p><strong>Acceptance criteria agreed in advance are a measurement decided before the results are in.</strong> That is the same rule as honest simulation: say what would count as success before you look, and don't move the line afterward.</p>
+</section>
+
+<section class="card">
+  <h2>What this means for your project</h2>
+  <p>Your project is individual and you aren't managing a team, but the same practices translate directly into your Data &amp; Methods draft.</p>
+  <div class="tw"><table>
+    <tr><th>Project practice</th><th>In your project</th><th>Where it goes</th></tr>
+    <tr><td>Name the sponsor who holds authority</td><td>Name who decided the change and why. That decision may be the most important thing your data can't see.</td><td>Brief, element 3; Module 3</td></tr>
+    <tr><td>Confirm who owns the resources, and the real hours available</td><td>Name who owns each data source, and whether you can actually get it.</td><td>Section 3, data source</td></tr>
+    <tr><td>Write a scope statement that lists what you won't do</td><td>State what your data cannot tell you.</td><td>Sections 4 and 5</td></tr>
+    <tr><td>Agree on acceptance criteria at the start</td><td>State your prediction before you look at the data, and don't tune toward it.</td><td>Brief, element 4; your simulation</td></tr>
+    <tr><td>Plan the handover</td><td>Ask who keeps measuring after the change. If no one does, your "after" data may not exist.</td><td>Section 4, quality concerns</td></tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>Where this fits in your MBA</h2>
+  <p>A project is where the models of the MBA have to work together. Strategy says which projects are worth doing. Accounting supplies the budget. Organizational behavior explains leadership and the pull of two bosses in a matrix. Operations explains capacity and queues. See <a href="../../models/">Models and the MBA</a>. Managed well, a project isn't a disruption to the organization's routine. It is how the organization changes its routine, and that change is what your data has to catch.</p>
+</section>
+
+<section class="card">
+  <h2>Where this is going</h2>
+  <h3>The loop closes, almost always incompletely</h3>
+  <p>Evaluation closes a loop. A model of the organization justified the project; the project changed something and produced data; the analysis carries what the data shows back to the model. That loop almost never closes completely. Some of what the project changed was never recorded. Some of what was recorded measures the project, not the outcome. And the people who could tell you what happened have moved on to the next one.</p>
+  <p>This is Box's point in the reading next to this one: <em>all models are wrong</em>, so the scientist "must be alert to what is importantly wrong." An incomplete loop is the normal condition, not a failure. The job is to say which gaps are tigers and which are mice, and to say it plainly in your white paper.</p>
+  <p><strong>Module 3 gives this a name.</strong> Judea Pearl sorts questions onto a ladder: <em>seeing</em> (what goes with what?), <em>doing</em> (what happens if we act?), and <em>imagining</em> (what would have happened otherwise?). Data, and the AI that finds patterns in it, can carry you up the first rung; Module 2 works that rung, association, and its limits. Every rung above it needs something the data can't supply: an experiment, or a model you state and defend. How S1, S4, and S7 came to get SmartShift, the authority question above, is exactly the kind of thing that keeps Riverbend's data on the first rung unless a model accounts for it. That is why the course began with models: your Project Brief is the part of your project that comes from outside the data.</p>
+  <div class="notice"><strong>The takeaway of the whole course, previewed.</strong> Data can tell you what goes with what. Only data plus a model you are willing to defend can tell you what will happen if you act. Machine learning and AI make the first part cheap. That makes the second part more important, not less.</div>
+  <details>
+    <summary>Going deeper: Pearl's ladder and machine learning</summary>
+    <div class="tw"><table>
+      <tr><th>Rung</th><th>The question</th><th>At Riverbend</th><th>What can answer it</th></tr>
+      <tr><td><strong>1. Seeing</strong><br><span class="muted">association</span></td><td>What goes with what?</td><td>Do SmartShift sites have lower turnover?</td><td>Data and pattern-finding: statistics, machine learning, AI</td></tr>
+      <tr><td><strong>2. Doing</strong><br><span class="muted">intervention</span></td><td>What happens if we act?</td><td>If we roll SmartShift out everywhere, will turnover fall?</td><td>An experiment, or data plus a causal model</td></tr>
+      <tr><td><strong>3. Imagining</strong><br><span class="muted">counterfactuals</span></td><td>What would have happened otherwise?</td><td>Would this nurse have stayed if their site had never adopted SmartShift?</td><td>A causal model, resting on assumptions that can't all be tested</td></tr>
+    </table></div>
+    <p>Pearl won the Turing Award for his work on probabilistic and causal reasoning. In his view, most of machine learning and modern analytics live on the first rung, and are extraordinarily good at it. No amount of first-rung data, by itself, answers a question on a higher rung; that has since been proved as the <em>causal hierarchy theorem</em>. An AI agent acting on patterns it learned from records is making second-rung moves on first-rung knowledge. The frontier of modern analytics puts the two together: machine learning working inside a causal design, while a stated model carries the causal claim. We take this up properly in Module 3.</p>
+  </details>
+  <details>
+    <summary>An anchor: why no system can close the loop from the inside</summary>
+    <p>We don't cover this in the course, but it sits underneath modern knowledge, and underneath every computer and AI you will use. In 1931 Kurt Gödel proved that any consistent formal system powerful enough to do ordinary arithmetic contains true statements it cannot prove by its own rules. You can step outside to a stronger system that proves them, but the stronger system has unprovable truths of its own. A few years later Alan Turing showed the computational version: there are questions about programs that no program can answer. Every formal system of computation, AI included, inherits these limits.</p>
+    <p>Gödel's theorem is about formal systems, not organizations, so here it is an analogy, not a proof. But it is the right analogy. An evaluation is a system too, data plus the rules for reading it, and some of the questions that matter most can't be settled from inside it. Pearl's causal hierarchy is the precise version for evidence: what climbs the ladder has to be added from outside the data, and what is added is itself an assumption, open to argument.</p>
+  </details>
+  <p class="muted">This page draws on Erik W. Larson, Clifford F. Gray, and Pinyarat Sirisomboonsuk, <em>Project Management: A Socio-Technical Approach</em>, 9th ed., 2024 release (McGraw Hill, 2024), the text used in the MBA's project management course. The framing around the boundary and the data questions is this course's own.</p>
+
+</section>
+
+<section class="card">
+  <h2>Listen, watch, and go further</h2>
+  <p>Optional. Each comes with one thing to listen or look for.</p>
+  <div class="tw"><table>
+    <tr><th>Source</th><th>What it is</th><th>Listen or look for</th></tr>
+    <tr><td><a href="https://sanalabs.com/strange-loop/ethan-mollick">"How to Build an AI-First Organization"</a><br><span class="muted">Strange Loop podcast, with Ethan Mollick, June 2025 · about an hour</span></td><td>The author of the jagged-frontier piece on how organizations should be redesigned around AI, including whether org charts built for an all-human workforce still fit.</td><td>Which side of the boundary does he think has to change first: the organization or operations?</td></tr>
+    <tr><td><a href="https://knowledge.wharton.upenn.edu/podcast/this-week-in-business/where-artificial-intelligence-stands-heading-into-2026/">"AI in 2026: What's Next?"</a><br><span class="muted">Knowledge at Wharton podcast, late 2025</span></td><td>A shorter, more sober update. Mollick argues AI probably had not yet caused large-scale changes in the labor market, and that the hard part is reworking processes inside organizations.</td><td>The gap between what agents can do and what organizations have reorganized to let them do. Where would that gap show up in data?</td></tr>
+    <tr><td><a href="https://web-assets.bcg.com/dc/c5/1bcbfdc0405c85fb14972a57c20a/the-emerging-agentic-enterprise-how-leaders-must-navigate-a-new-age-of-ai.pdf">"The Emerging Agentic Enterprise"</a><br><span class="muted">MIT Sloan Management Review and BCG, November 2025 · free report</span></td><td>A survey of more than 2,000 executives. Its central claim: agentic AI is neither a tool nor a teammate, which is why it fits existing ways of managing so badly.</td><td>Read the summary, then ask the Skeptic's question: it's a survey of executives, so what can it tell you, and what can't it?</td></tr>
+    <tr><td><a href="https://lexfridman.com/judea-pearl/">"Judea Pearl: Causal Reasoning, Counterfactuals, Bayesian Networks, and the Path to AGI"</a><br><span class="muted">Lex Fridman Podcast #56, December 2019 · long; sample the first half</span></td><td>Pearl in his own words on the ladder, the "do" operator, and why learning from data alone falls short.</td><td>His reason that machine learning, however good, stays on the first rung. Do you find it convincing?</td></tr>
+    <tr><td><a href="https://doi.org/10.1145/3241036">"The Seven Tools of Causal Inference, with Reflections on Machine Learning"</a><br><span class="muted">Judea Pearl, <em>Communications of the ACM</em>, March 2019 · short article</span></td><td>The three-rung ladder in seven pages, written for computer scientists but readable without the math.</td><td>Which of his seven tools would your project need? Keep the answer for Module 3.</td></tr>
+    <tr><td><a href="https://plato.stanford.edu/entries/goedel-incompleteness/">"Gödel's Incompleteness Theorems"</a><br><span class="muted">Stanford Encyclopedia of Philosophy · read the introduction only</span></td><td>What Gödel actually proved, stated carefully, from the same encyclopedia as the kick-off reading on models.</td><td>Where does the analogy on this page hold, and where does it break?</td></tr>
+    <tr><td><a href="https://www.coursera.org/learn/wharton-operations">"Introduction to Operations Management"</a><br><span class="muted">Christian Terwiesch, Wharton, on Coursera · video lectures</span></td><td>A widely used introduction to process analysis that covers Little's Law with worked examples. Operations-track students will recognize it.</td><td>Organizational track: watch the Little's Law lecture and find one process in your project it applies to.</td></tr>
+    <tr><td><a href="http://web.eng.ucsd.edu/~massimo/ECE158A/Handouts_files/Little.pdf">"Little's Law"</a><br><span class="muted">John D. C. Little and Stephen C. Graves, in <em>Building Intuition</em> (Springer, 2008), 81–100</span></td><td>The law explained by the man it is named for and a colleague, starting from what a manager measures. Skip the proofs.</td><td>Find their conditions for when the law holds. Does a Riverbend site in the middle of a rollout meet them?</td></tr>
+  </table></div>
+</section>
+
+<nav class="pager"><a class="prev" href="../readings/#online2"><span class="dir">← Readings</span><span class="t">Read before Online 2</span></a><a class="next" href="../online-2/"><span class="dir">Session →</span><span class="t">Online 2: describing your data</span></a></nav>
+</main>
+<footer class="site"><div class="inner">
+<img src="../../assets/wu-mba-signature.png" alt="Willamette University MBA">
+<div>Integrated 622 · Data, Statistics, and Decision Science · Fall 2026<br>
+Willamette University · Atkinson Graduate School of Management<br>
+Robert W. Walker · <a href="mailto:rwalker@willamette.edu">rwalker@willamette.edu</a> · I eagerly await your puzzles.</div>
+</div></footer>
+</body>
+</html>
