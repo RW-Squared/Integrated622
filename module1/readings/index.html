@@ -24,7 +24,7 @@
 <main class="page">
 <nav class="crumbs"><a href="../../">Home</a> › <a href="../../module1/">Module 1</a> › Readings</nav>
 <div class="page-head"><div class="eyebrow">Module 1 · Readings</div>
-<h1>Module 1 readings</h1><p class="lede">One core reading before each session, usually a short optional one, and an active reading guide for every reading.</p></div>
+<h1>Module 1 readings</h1><p class="lede">About two hours of reading before each session, with an active reading guide for every reading.</p></div>
 
 <section class="card">
   <h2>How to use these guides</h2>
@@ -34,29 +34,79 @@
     <div class="tile"><h3>While you read</h3><p>Four or five things to find. Answer each in a line or two of your own words, not by copying.</p></div>
     <div class="tile"><h3>After you read</h3><p>A short piece of writing for your own project. Bring it to the session; it feeds your pod work and your drafts.</p></div>
   </div>
-  <p style="margin-top:1rem">Keep your answers in one running document, your reading notebook, so you can find them when you write the Data &amp; Methods draft. Plan on about an hour per session, a little more if you take the optional reading.</p>
-  <p class="muted"><strong>Open</strong> readings are free online. <strong>Canvas reserve</strong> readings are in Canvas under Files, in the Module 1 folder.</p>
+  <p style="margin-top:1rem">Keep your answers in one running document, your reading notebook, so you can find them when you write the Data &amp; Methods draft. Each session's set takes about two hours, guides included. The times below are estimates; some of these readings are dense, and slow is fine.</p>
+  <h3>Unfamiliar references: read with your AI analyst</h3>
+  <p>Some of these readings assume things you haven't met: a name, a model, a term from another field. Don't skip them. Mark every one, then ask Gemini about the ones that matter. <strong>Then check one of its answers against a second source.</strong> Your AI analyst is often right and sometimes confidently wrong, and these readings are a low-stakes place to practice catching it.</p>
+  <div class="prompt">I'm reading [title and author] for an MBA course on data and decision science. I ran into this reference and don't know it: [the name, model, or term, with the sentence it appears in]. Explain what it is in plain language, why the author might mention it here, and give me one source I could check your answer against.<button class="copy">Copy</button></div>
+  <p class="muted"><strong>Open</strong> readings are free online. <strong>Course site</strong> readings are on this site. <strong>Canvas reserve</strong> readings are in Canvas under Files, in the Module 1 folder.</p>
 </section>
 
 <section class="card">
   <h2>At a glance</h2>
   <div class="tw"><table>
-    <tr><th>Read before</th><th>Core</th><th>Optional</th></tr>
-    <tr><td><a href="#kickoff">Module 1 kick-off</a><br><span class="muted">Tue Oct 20 · Wed Oct 21</span></td><td>Hubbard, <em>How to Measure Anything</em>, ch. 3 <span class="muted">(Canvas reserve)</span></td><td>Campbell, "Assessing the Impact of Planned Social Change," the passage on indicators <span class="muted">(open)</span></td></tr>
-    <tr><td><a href="#online1">Online 1</a><br><span class="muted">Thu Oct 22</span></td><td>Broman &amp; Woo, "Data Organization in Spreadsheets" <span class="muted">(open)</span></td><td>Mollick, "Centaurs and Cyborgs on the Jagged Frontier" <span class="muted">(open)</span></td></tr>
-    <tr><td><a href="#inperson2">In-person 2</a><br><span class="muted">Tue Oct 27 · Wed Oct 28</span></td><td>D'Ignazio &amp; Klein, <em>Data Feminism</em>, ch. 4, "What Gets Counted Counts" <span class="muted">(open)</span>, and Savage, "The Flaw of Averages" <span class="muted">(2 pages, Canvas reserve)</span></td><td>None: the core is two pieces</td></tr>
-    <tr><td><a href="#online2">Online 2</a><br><span class="muted">Thu Oct 29</span></td><td>Gebru et al., "Datasheets for Datasets" <span class="muted">(open)</span></td><td>Hubbard, <em>How to Measure Anything</em>, ch. 4 <span class="muted">(Canvas reserve)</span></td></tr>
+    <tr><th>Read before</th><th>Readings</th><th>Time</th></tr>
+    <tr><td><a href="#kickoff">Module 1 kick-off</a><br><span class="muted">Tue Oct 20 · Wed Oct 21</span></td><td>
+      <a href="#k-models">Models and the MBA</a> <span class="muted">(course site)</span><br>
+      <a href="#k-sep">Frigg &amp; Hartmann, "Models in Science," §§ 1, 3, and 5.2</a> <span class="muted">(open)</span><br>
+      <a href="#k-hubbard">Hubbard, <em>How to Measure Anything</em>, ch. 3</a> <span class="muted">(Canvas reserve)</span><br>
+      <span class="muted">Optional: Campbell on indicators; an AI tour of models in your discipline</span></td><td>About 2¼ hours</td></tr>
+    <tr><td><a href="#online1">Online 1</a><br><span class="muted">Thu Oct 22</span></td><td>
+      <a href="#o1-broman">Broman &amp; Woo, "Data Organization in Spreadsheets"</a> <span class="muted">(open)</span><br>
+      <a href="#o1-wickham">Wickham, "Tidy Data," §§ 1–3</a> <span class="muted">(open)</span><br>
+      <a href="#o1-mollick">Mollick, "Centaurs and Cyborgs on the Jagged Frontier"</a> <span class="muted">(open)</span><br>
+      <span class="muted">Optional: Mollick, "Thinking Like an AI"</span></td><td>About 1¾ hours</td></tr>
+    <tr><td><a href="#inperson2">In-person 2</a><br><span class="muted">Tue Oct 27 · Wed Oct 28</span></td><td>
+      <a href="#i2-dk">D'Ignazio &amp; Klein, <em>Data Feminism</em>, ch. 4</a> <span class="muted">(open)</span><br>
+      <a href="#i2-savage">Savage, "The Flaw of Averages"</a> <span class="muted">(Canvas reserve)</span><br>
+      <a href="#i2-hubbard">Hubbard, <em>How to Measure Anything</em>, ch. 6</a> <span class="muted">(Canvas reserve)</span><br>
+      <span class="muted">Optional: a Monte Carlo simulation with Gemini</span></td><td>About 2 hours</td></tr>
+    <tr><td><a href="#online2">Online 2</a><br><span class="muted">Thu Oct 29</span></td><td>
+      <a href="#o2-gebru">Gebru et al., "Datasheets for Datasets"</a> <span class="muted">(open)</span><br>
+      <a href="#o2-box">Box, "Science and Statistics"</a> <span class="muted">(Canvas reserve)</span><br>
+      <span class="muted">Optional: Hubbard, ch. 4</span></td><td>About 1¾ hours</td></tr>
   </table></div>
 </section>
 
 <!-- ============================== KICK-OFF ============================== -->
 <section class="card" id="kickoff">
   <div class="eyebrow">Read before the Module 1 kick-off · Tue Oct 20 (Salem) · Wed Oct 21 (Portland)</div>
-  <h2>Hubbard: why immeasurables aren't</h2>
-  <p>Douglas W. Hubbard, <em>How to Measure Anything: Finding the Value of "Intangibles" in Business</em>, 3rd ed. (Wiley, 2014), chapter 3, "The Illusion of Intangibles: Why Immeasurables Aren't."</p>
-  <div class="badges"><span class="badge">Core</span><span class="badge">Canvas reserve</span><span class="badge">About 60 minutes</span></div>
-  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Your Project Brief is full of concepts that feel unmeasurable: engagement, readiness, quality, fairness. Hubbard argues that if something matters, it shows up in something you can observe. His "clarification chain" is the first half of the operationalization chain we walk on the first night.</p>
+  <h2>What is a model, and how do you measure what's in one?</h2>
+  <p>The course rests on one idea: data is the measurement of models. Tonight's readings take each half of that in turn. First, what a model is and how anyone learns from one. Then, how a concept inside a model becomes something you can observe. Read them in this order. Your Project Brief is due the same night, so start early; the Brief and these readings help each other.</p>
 
+  <h3 id="k-models" style="margin-top:1.4rem">1. Models and the MBA</h3>
+  <p>This site's <a href="../../models/">Models and the MBA</a> page.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Course site</span><span class="badge">About 15 minutes</span></div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li>The four parts every model has. Check that your Brief has all four. Which is thinnest?</li>
+      <li>The two jobs a model does. Which one does your project's question ask of your model?</li>
+      <li>The two models every project holds. Write one sentence naming each for your project.</li>
+    </ol>
+  </div>
+
+  <h3 id="k-sep" style="margin-top:1.4rem">2. Frigg and Hartmann: models in science</h3>
+  <p>Roman Frigg and Stephan Hartmann, "<a href="https://plato.stanford.edu/archives/fall2013/entries/models-science/">Models in Science</a>," <em>Stanford Encyclopedia of Philosophy</em> (Fall 2013 edition). Read sections <strong>1, 3, and 5.2</strong> only.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 60 minutes, including Gemini</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> It is a hard read, written for philosophers, and that is part of the point. The Models page tells you what a model is in our terms; this entry shows how people who think about models for a living sort them out. Two of its ideas carry the whole course: there are models of <em>phenomena</em> and models of <em>data</em>, and you learn about the world from a model in two steps, not one.</p>
+  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Your own definition (3 minutes)</h3></div>
+    <p>Write one sentence: "A model is…" Don't look anything up. You'll revise it at the end.</p>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li><strong>Section 1: two kinds of representation.</strong> The entry distinguishes models that represent some part of the world from models of data. Find both. Which one is your Project Brief? Which one does Module 1 ask you to build?</li>
+      <li><strong>Section 3: learning in two steps.</strong> The entry says we first learn about the model itself, and then have to carry what we learned over to the thing it represents. Find where simulation comes in. What has to be true for the carrying-over to work? (Compare element 2 of your Brief: "what would have to be true for the model to be right?")</li>
+      <li><strong>Section 5.2: a debate.</strong> Name the question being argued about, in one sentence, and the main positions. Now picture an organization that holds several models of itself (finance, operations, organizational) that don't agree. Does the debate help you think about that?</li>
+      <li><strong>Unfamiliar references.</strong> As you read, mark every name, model, or term you don't recognize. You'll find plenty. Pick <strong>three</strong>, ask Gemini about each with the prompt at the top of this page, and check one answer against a second source.</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Revise, and bring three references (10 minutes)</h3></div>
+    <p>Rewrite your "A model is…" sentence. What changed? Then write down your three references, Gemini's one-line answers, and what your check turned up: confirmed, corrected, or couldn't verify. Bring them to the kick-off; we'll open with a few.</p>
+  </div>
+
+  <h3 id="k-hubbard" style="margin-top:1.4rem">3. Hubbard: why immeasurables aren't</h3>
+  <p>Douglas W. Hubbard, <em>How to Measure Anything: Finding the Value of "Intangibles" in Business</em>, 3rd ed. (Wiley, 2014), chapter 3, "The Illusion of Intangibles: Why Immeasurables Aren't."</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Canvas reserve</span><span class="badge">About 50 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Your Brief is full of concepts that feel unmeasurable: engagement, readiness, quality, fairness. Hubbard argues that if something matters, it shows up in something you can observe. His "clarification chain" is the first half of the operationalization chain we walk on the first night.</p>
   <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Pick your hardest concept (5 minutes)</h3></div>
     <p>Choose the one concept in your Brief you think will be hardest to measure. Write one sentence: <em>why</em> can't it be measured?</p>
   </div>
@@ -73,6 +123,16 @@
   </div>
   <p class="muted">A connection to look for: Hubbard treats measurement as <em>reducing uncertainty for a decision</em>. That is the forecasting job of a model on the <a href="../../models/">Models</a> page.</p>
 
+  <details><summary>Optional: an AI tour of the models in your discipline (about 20 minutes)</summary>
+    <p>Last spring I asked Gemini to <a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Business-Models/">survey the models used across the business disciplines</a>, and to <a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Models/">sort models in twenty academic fields into explanatory and predictive</a>. Do the same for the discipline you're arriving from:</p>
+    <div class="prompt">Give a detailed discussion of how models are used in [organizational management / operations management]. Give at least four common models, and for each: its key variables, the relationships it claims between them, whether it is mainly explanatory or predictive, and a reference I could follow. Double-check your references.<button class="copy">Copy</button></div>
+    <ol>
+      <li>Is the model your Brief uses on the list? If not, why not?</li>
+      <li>Check two of its references. Do they exist, and do they say what Gemini says they say?</li>
+      <li>Pick one model on the list. What would you have to measure to test it?</li>
+    </ol>
+  </details>
+
   <details><summary>Optional: Campbell on what happens to a measure once it matters (about 20 minutes)</summary>
     <p>Donald T. Campbell, "Assessing the Impact of Planned Social Change," Occasional Paper No. 8, Public Affairs Center, Dartmouth College (1976). Reprinted in the <em>Journal of MultiDisciplinary Evaluation</em> 7(15), 2011: <a href="https://doi.org/10.56645/jmde.v7i15.297">open PDF via the journal</a>. Read only the passage on the corruption of quantitative indicators (search the PDF for "quantitative social indicator") and the examples around it.</p>
     <ol>
@@ -86,11 +146,13 @@
 <!-- ============================== ONLINE 1 ============================== -->
 <section class="card" id="online1">
   <div class="eyebrow">Read before Online 1 · Thu Oct 22</div>
-  <h2>Broman and Woo: what a good table looks like</h2>
+  <h2>What a good table looks like, and what an AI analyst does with it</h2>
+  <p>Thursday's question is "what is a row?", asked of real files with an AI analyst. The first two readings answer it from the side of the table. The third is about the analyst.</p>
+
+  <h3 id="o1-broman" style="margin-top:1.4rem">1. Broman and Woo: data organization in spreadsheets</h3>
   <p>Karl W. Broman and Kara H. Woo, "Data Organization in Spreadsheets," <em>The American Statistician</em> 72, no. 1 (2018): 2–10. <a href="https://doi.org/10.1080/00031305.2017.1375989">Journal version</a> · <a href="https://peerj.com/preprints/3183">Free preprint</a>.</p>
   <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 40 minutes</span></div>
-  <p style="margin-top:.8rem"><strong>Why this reading.</strong> In most small organizations the spreadsheet <em>is</em> the system of record, and your AI analyst reads a table exactly as it is laid out. This is the practical side of the question that governs every join: what is a row? Skip anything about specific software; the principles are what matter.</p>
-
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> In most small organizations the spreadsheet <em>is</em> the system of record, and your AI analyst reads a table exactly as it is laid out. Skip anything about specific software; the principles are what matter.</p>
   <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Look at a real table (5 minutes)</h3></div>
     <p>Open <a href="../../riverbend/data/staff_quarters.csv" download>staff_quarters.csv</a> in Google Sheets and scroll for two minutes. Write one sentence: what is one row?</p>
   </div>
@@ -107,25 +169,55 @@
     <p>For your project's organization, real or a useful fiction: which of their rules is its data most likely to break, and what would an AI analyst get wrong because of it? Two or three sentences. You'll use this in the data audit and in Part 1 of the Module 1 exercise.</p>
   </div>
 
-  <details><summary>Optional: Mollick on where AI helps and where it quietly hurts (about 15 minutes)</summary>
-    <p>Ethan Mollick, "<a href="https://www.oneusefulthing.org/p/centaurs-and-cyborgs-on-the-jagged">Centaurs and Cyborgs on the Jagged Frontier</a>," <em>One Useful Thing</em>, September 16, 2023. A plain-language summary of a field experiment with management consultants using AI.</p>
+  <h3 id="o1-wickham" style="margin-top:1.4rem">2. Wickham: tidy data</h3>
+  <p>Hadley Wickham, "<a href="https://doi.org/10.18637/jss.v059.i10">Tidy Data</a>," <em>Journal of Statistical Software</em> 59, no. 10 (2014): 1–23. Read <strong>sections 1 through 3</strong>; skip the later sections on software and the code.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 40 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Broman and Woo say how to keep a table clean. Wickham says what a table <em>is</em>: every variable a column, every observation a row, and every kind of observational unit its own table. That last rule is why Riverbend comes as two files, and why joining them carelessly goes so wrong.</p>
+  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Why two files? (3 minutes)</h3></div>
+    <p>Riverbend has one file of staff and one of sites. Write one sentence: why not put everything in one file?</p>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li><strong>The three rules of tidy data.</strong> Copy them in your own words. Does each Riverbend file follow all three?</li>
+      <li><strong>"Observational unit."</strong> This is Wickham's term for what we mean by "what is a row?" What are the observational units in Riverbend? Is "one employee" one of them?</li>
+      <li><strong>Column headers that are values.</strong> Find his example where the column names are themselves data. Think of a report at work laid out that way, such as months across the top. What question becomes hard to ask of it?</li>
+      <li><strong>Several kinds of unit in one table.</strong> Find what goes wrong when one table mixes kinds of units. Then predict what happens if you join staff_quarters to site_weeks on <code>site_id</code> without first reducing site_weeks to one row per site. We'll check your prediction on Thursday.</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Your project's units (10 minutes)</h3></div>
+    <p>Name the observational unit or units in your project's data. If there is more than one, how many tables would you need, and what column would link them? This is section 1 of your Data &amp; Methods draft, in rough form.</p>
+  </div>
+
+  <h3 id="o1-mollick" style="margin-top:1.4rem">3. Mollick: the jagged frontier</h3>
+  <p>Ethan Mollick, "<a href="https://www.oneusefulthing.org/p/centaurs-and-cyborgs-on-the-jagged">Centaurs and Cyborgs on the Jagged Frontier</a>," <em>One Useful Thing</em>, September 16, 2023. A plain-language summary of a field experiment with management consultants using AI.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 15 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> On Thursday the AI does the arithmetic and you make the choices. This is the best short evidence on why that division of labor matters: AI helps a great deal on some tasks and quietly hurts on others that look just like them.</p>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
     <ol>
       <li>What is the "jagged frontier"? Why is it hard to see from inside a task?</li>
       <li>What happened to the consultants who used AI on the task that lay <em>outside</em> the frontier?</li>
-      <li>Centaur or cyborg: which do you expect to be on Thursday? How will you notice when you've crossed the frontier?</li>
+      <li>What are centaurs and cyborgs? Which do you expect to be on Thursday?</li>
     </ol>
-    <p class="muted">Watch for this on Thursday: in the engagement and caseload demos, the AI's numbers are right, and it still makes choices that only you can judge.</p>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Your tripwire (5 minutes)</h3></div>
+    <p>Write one sentence: "I'll know I've crossed the frontier with my AI analyst when…" Watch for it on Thursday: in the engagement and caseload demos, the AI's numbers are right, and it still makes choices only you can judge.</p>
+  </div>
+
+  <details><summary>Optional: Mollick on how to think about what an AI is doing (about 15 minutes)</summary>
+    <p>Ethan Mollick, "<a href="https://www.oneusefulthing.org/p/thinking-like-an-ai">Thinking Like an AI</a>," <em>One Useful Thing</em>. An AI language model is itself a model: a model of text. What does knowing that tell you about where it will be confident and wrong?</p>
   </details>
 </section>
 
 <!-- ============================== IN-PERSON 2 ============================== -->
 <section class="card" id="inperson2">
   <div class="eyebrow">Read before In-person 2 · Tue Oct 27 (Salem) · Wed Oct 28 (Portland)</div>
-  <h2>D'Ignazio and Klein: what gets counted counts</h2>
+  <h2>How data misleads, and what a single number hides</h2>
+  <p>In-person 2 covers the five ways data lies, honest simulation, and describing a variable. The first reading is about the categories data is built from. The other two are about why one number, usually an average, is not enough, and what a simulation gives you instead.</p>
+
+  <h3 id="i2-dk" style="margin-top:1.4rem">1. D'Ignazio and Klein: what gets counted counts</h3>
   <p>Catherine D'Ignazio and Lauren F. Klein, <em>Data Feminism</em> (MIT Press, 2020), chapter 4, "<a href="https://data-feminism.mitpress.mit.edu/pub/h1w0nbqp">What Gets Counted Counts</a>." Free online under a Creative Commons license.</p>
   <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 60 minutes</span></div>
   <p style="margin-top:.8rem"><strong>Why this reading.</strong> Every Labels column starts with someone deciding the categories. Who decides shapes who shows up in the data and how. This is <em>selected</em> and <em>mismeasured</em>, two of the five ways data lies, at their root. The examples come mostly from gender and public data; read them as cases of a general problem every organization has.</p>
-
   <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Who chose the boxes? (5 minutes)</h3></div>
     <p>Look at Riverbend's <code>role</code>, <code>age_band</code>, and <code>exit_reason</code> columns. Who decided those categories? Who might not fit them well?</p>
   </div>
@@ -142,7 +234,7 @@
     <p class="muted">Operations track: product categories, defect codes, and downtime reason codes are classifications too. Someone chose them, and the choice decides which problems are visible.</p>
   </div>
 
-  <h3 style="margin-top:1.6rem">And a short one: Savage, "The Flaw of Averages"</h3>
+  <h3 id="i2-savage" style="margin-top:1.4rem">2. Savage: the flaw of averages</h3>
   <p>Sam L. Savage, "The Flaw of Averages," <em>Harvard Business Review</em> 80, no. 11 (November 2002): 20–21. Two pages, on Canvas reserve or through the library's HBR access.</p>
   <div class="badges"><span class="badge">Core</span><span class="badge">Canvas reserve</span><span class="badge">About 10 minutes</span></div>
   <p style="margin-top:.8rem"><strong>Why this reading.</strong> In class, the mean-versus-median donor example is a problem of <em>describing</em> data. Savage shows the same trap as a problem of <em>planning</em>, and why a simulation that includes noise is the honest answer to it.</p>
@@ -153,19 +245,41 @@
       <li>What does he recommend instead of a single number?</li>
     </ol>
   </div>
-  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Your single number (5 minutes)</h3></div>
-    <p>Name the one number in your project that someone would be tempted to plan on: an average wait, an average caseload, an average score. What range would you want instead? What would your simulation need to say about noise to produce that range? Bring it to the simulation segment at 7:15.</p>
+
+  <h3 id="i2-hubbard" style="margin-top:1.4rem">3. Hubbard: quantifying risk through modeling</h3>
+  <p>Hubbard, <em>How to Measure Anything</em>, 3rd ed., chapter 6, "Quantifying Risk through Modeling."</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Canvas reserve</span><span class="badge">About 45 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> Savage names the problem; Hubbard shows the method. A Monte Carlo simulation states a model, puts a range on each uncertain input, and runs the model forward many times to see the range of outcomes. That is exactly the honest simulation you'll specify at In-person 2 and build at Online 2, done by hand so you can see its parts. Skim the section on software tools; your AI analyst replaces them.</p>
+  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Your single number (5 minutes)</h3></div>
+    <p>Name the one number in your project someone would be tempted to plan on: an average wait, an average caseload, an average score. Write it down with your best guess of its value.</p>
   </div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li><strong>How not to quantify risk.</strong> What does Hubbard say is wrong with the way organizations usually express risk? Which of our six kinds of variable is a "high / medium / low" rating?</li>
+      <li><strong>The worked example.</strong> Identify its inputs, the range given to each, the relationship that turns inputs into the outcome, and what comes out. Match each to our four-part simulation specification: units, variables, relationships, noise.</li>
+      <li><strong>Ranges, not points.</strong> How does he express what we don't know about each input? Where would those ranges come from in your project?</li>
+      <li><strong>The risk paradox.</strong> State it in one sentence. Does it describe any decision in your organization?</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>From one number to a range (10 minutes)</h3></div>
+    <p>Go back to your single number. Replace it with a range you are 90 percent sure contains the true value, and name two inputs that drive it, each with its own range. That is the "noise" line of your simulation specification. Bring it to the simulation segment at 7:15.</p>
+  </div>
+
+  <details><summary>Optional: a Monte Carlo simulation with Gemini (about 15 minutes)</summary>
+    <p>Last spring's <a href="https://robertwwalker.github.io/BUS1301-SP26/writeups/Gemini-Monte-Carlo/">Monte Carlo writeup</a> asks Gemini, in one plain-language paragraph, to simulate customers arriving, deciding whether to buy, and spending. Read the prompt, then write your own version of it for the two inputs you named above. Don't run it yet; we'll do that at Online 2.</p>
+  </details>
 </section>
 
 <!-- ============================== ONLINE 2 ============================== -->
 <section class="card" id="online2">
   <div class="eyebrow">Read before Online 2 · Thu Oct 29</div>
-  <h2>Gebru et al.: a datasheet for your data</h2>
+  <h2>Documenting your data, and holding it up against your model</h2>
+  <p>At Online 2 you draft the Data &amp; Methods section. The first reading is a checklist for documenting a dataset. The second is a classic on how a model and data talk to each other, and on which of a model's flaws are worth worrying about.</p>
+
+  <h3 id="o2-gebru" style="margin-top:1.4rem">1. Gebru et al.: datasheets for datasets</h3>
   <p>Timnit Gebru, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé III, and Kate Crawford, "Datasheets for Datasets," <em>Communications of the ACM</em> 64, no. 12 (2021): 86–92. <a href="https://doi.org/10.1145/3458723">Journal version</a> · <a href="https://arxiv.org/abs/1803.09010">Free version</a>.</p>
   <div class="badges"><span class="badge">Core</span><span class="badge">Open</span><span class="badge">About 40 minutes</span></div>
   <p style="margin-top:.8rem"><strong>Why this reading.</strong> The authors propose that every dataset come with a datasheet: a standard set of questions about why it was made, what is in it, how it was collected, and what it should and shouldn't be used for. Your Data &amp; Methods draft is a short datasheet for your own data. The paper comes from machine learning; ignore the technical asides and read it as a documentation checklist.</p>
-
   <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>Reread your variable table (5 minutes)</h3></div>
     <p>Have your variable table and data-source decision from In-person 2 open. Keep the <a href="../online-2/">Data &amp; Methods outline</a> next to it.</p>
   </div>
@@ -175,12 +289,31 @@
       <li><strong>Map the sections.</strong> The questions are grouped into sections: motivation, composition, collection process, preprocessing and cleaning, uses, distribution, and maintenance. For each of the five sections of your Data &amp; Methods draft, find the datasheet section that matches it best.</li>
       <li><strong>"What is a row?" in their words.</strong> Find the composition questions about what each instance represents and whether anything is missing. Which of our ideas are they?</li>
       <li><strong>The five ways data lies.</strong> Which collection-process questions would catch data that is <em>selected</em> or <em>mistimed</em>?</li>
-      <li><strong>What our template leaves out.</strong> Find one datasheet question with no counterpart in our outline that matters for your project.</li>
+      <li><strong>What our outline leaves out.</strong> Find one datasheet question with no counterpart in our outline that matters for your project.</li>
     </ol>
   </div>
   <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Answer five questions about your own data (15 minutes)</h3></div>
     <p>Choose five datasheet questions that our outline doesn't already ask, and answer them for your data. If your data is simulated, answer them for the simulation: who made it, from what model, under what assumptions, and what it should not be used to claim. Your answers go into sections 3 and 4 of your draft.</p>
     <p class="muted">For the Module 1 exercise reflection: what would a datasheet for Riverbend say that its data dictionary doesn't?</p>
+  </div>
+
+  <h3 id="o2-box" style="margin-top:1.4rem">2. Box: science and statistics</h3>
+  <p>George E. P. Box, "Science and Statistics," <em>Journal of the American Statistical Association</em> 71, no. 356 (1976): 791–799. <a href="https://doi.org/10.1080/01621459.1976.10480949">Journal version</a>, through the library or on Canvas reserve.</p>
+  <div class="badges"><span class="badge">Core</span><span class="badge">Canvas reserve</span><span class="badge">About 45 minutes</span></div>
+  <p style="margin-top:.8rem"><strong>Why this reading.</strong> This is where "all models are wrong" comes from, and the sentence that follows it is the more useful one. Box describes learning as a back-and-forth between a model and data: the model says what to look for, the data pushes back, the model improves. That is the loop between the two models of your project. Skip any passage that turns mathematical; the argument is in the prose.</p>
+  <div class="step"><div class="step-head"><span class="step-num">Before</span><h3>What's wrong with your model? (3 minutes)</h3></div>
+    <p>Your model is wrong somewhere; every model is. Write down the one way you most suspect it's wrong.</p>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">While</span><h3>Find these</h3></div>
+    <ol>
+      <li><strong>The loop.</strong> Find Box's description of how theory and data drive each other. Draw it as a loop and compare it with the two-models diagram on the <a href="../../models/">Models</a> page. Where does Module 1 sit on that loop?</li>
+      <li><strong>"All models are wrong."</strong> Find the sentence, and the sentence about tigers and mice. What is the tiger in your Data &amp; Methods draft, and what are the mice?</li>
+      <li><strong>Parsimony.</strong> Why does Box prefer a simple model to an elaborate one? Look at your variable table: which variable could you drop, and what would you lose?</li>
+      <li><strong>Fisher.</strong> Box holds up R. A. Fisher as a model of how a statistician should work. What does Fisher do that Box admires? Use the unfamiliar-references prompt if you don't know who Fisher was.</li>
+    </ol>
+  </div>
+  <div class="step"><div class="step-head"><span class="step-num">After</span><h3>Name your tiger (10 minutes)</h3></div>
+    <p>Write the closing sentences for section 5 of your draft: for each key variable, one sentence saying whether it looks the way your model predicted (consistent, inconsistent, or can't tell yet). Then one more sentence naming the way your model is most importantly wrong, and what data would show it. Compare it with what you wrote under "Before."</p>
   </div>
 
   <details><summary>Optional: Hubbard on clarifying the decision first (about 40 minutes)</summary>
